@@ -69,14 +69,12 @@ export default function Navbar() {
     tlRef.current = tl;
     tl.progress(0).pause();
 
-    // ===== Links color logic (Desktop + Mobile) =====
     const desktopLinks = navRef.current?.querySelectorAll("a") || [];
     const mobileLinks = mobileNavRef.current?.querySelectorAll("a") || [];
     const allLinks = [...desktopLinks, ...mobileLinks];
 
     if (!allLinks.length) return;
 
-    // ✅ default: links BLACK
     gsap.set(allLinks, { color: "#000" });
 
     ScrollTrigger.create({

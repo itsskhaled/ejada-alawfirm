@@ -1,6 +1,3 @@
-// import { useTranslations } from "next-intl";
-// import LocaleSwitch from "@/components/LocaleSwitch";
-
 import AboutSection from "@/components/AboutSection";
 import AnimationHero from "@/components/AnimationHero";
 import FeaturesSection from "@/components/Features";
@@ -8,7 +5,6 @@ import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 
 export default function Page() {
-  // const t = useTranslations("section");
 
   return (
     <>
