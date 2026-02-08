@@ -108,7 +108,7 @@ export default function FeaturesSection() {
                             trigger: card,
                             start: "top 40%",
                             toggleActions: "play none none none",
-                            markers: true
+                            // markers: true
                         },
                     });
                 });
