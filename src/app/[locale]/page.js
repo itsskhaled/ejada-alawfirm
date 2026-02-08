@@ -1,0 +1,41 @@
+// import { useTranslations } from "next-intl";
+// import LocaleSwitch from "@/components/LocaleSwitch";
+
+import AboutSection from "@/components/AboutSection";
+import AnimationHero from "@/components/AnimationHero";
+import FeaturesSection from "@/components/Features";
+import HeroSection from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+
+export default function Page() {
+  // const t = useTranslations("section");
+
+  return (
+    <>
+      <Navbar />
+      <div className="relative w-full overflow-hidden">
+        <div className="absolute top-45">
+          <AnimationHero />
+        </div>
+        <div className="absolute top-50">
+          <AnimationHero />
+        </div>
+        <div className="absolute top-55">
+          <AnimationHero />
+        </div>
+        <div className="absolute top-60">
+          <AnimationHero />
+        </div>
+        <div className="absolute top-65">
+          <AnimationHero />
+        </div>
+        <div className="absolute top-70">
+          <AnimationHero />
+        </div>
+        <HeroSection />
+      </div>
+      <AboutSection />
+      <FeaturesSection />
+    </>
+  );
+}

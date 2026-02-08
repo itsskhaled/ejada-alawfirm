@@ -1,0 +1,75 @@
+{
+  "navbar": {
+    "Home": "Home",
+    "Service": "Service",
+    "About": "About us",
+    "Team": "Team",
+    "Blog": "Blog",
+    "btnHeader": "Contact"
+  },
+  "HeroSection": {
+    "HeadText": "Reliable solutions to support your rights",
+    "SubheadText": "We offer professional legal services built on experience, accuracy, and commitment, to help you make the right decision with confidence",
+    "SupportingText": "We will accompany you through all stages of your case, and we are committed to representing your interests in accordance with the applicable regulations and laws",
+    "ButtonLeft": "Contact us",
+    "ButtonRight": "Submit your legal advice"
+  },
+  "AboutSection": {
+    "titleSection": "About us",
+    "title": "Why choose Ejada?",
+    "text": "At Ejadah Law Firm and Legal Consultations, we provide comprehensive legal solutions for individuals and companies, led by a select group of specialized lawyers and consultants to ensure the best outcomes in accordance with Saudi regulations. We are committed to providing legal services based on a thorough understanding of our clients' needs, while offering practical solutions that help them make sound legal decisions with confidence and security. We are also committed to building long-term partnerships with our clients by providing ongoing legal support that contributes to protecting their interests and enhancing the stability of their businesses in a changing legal environment",
+    "itemsAbout": [
+      {
+        "id": 1,
+        "title": "successful Case",
+        "count": "6159",
+        "icon": "book-check"
+      },
+      { "id": 1, "title": "client", "count": "+200", "icon": "users" },
+      { "id": 1, "title": "issue", "count": "6479", "icon": "file-text" },
+      {
+        "id": 1,
+        "title": "Lawyer and Consultant",
+        "count": "+12",
+        "icon": "scale"
+      }
+    ]
+  },
+  "FeaturesSection": {
+    "titleSection": "Our Advantages",
+    "title": "Legal expertise you can trust",
+    "subTitle": "We provide professional legal services built on accuracy, continuous follow-up, and a full commitment to protecting the rights and interests of our clients at all stages",
+    "itemsFeature": [
+      {
+        "id": 1,
+        "title": "Qualified team",
+        "text": "Distinguished legal professionals with diverse expertise in various systems and legislations",
+        "icon": "user-star"
+      },
+      {
+        "id": 2,
+        "title": "High professional and ethical standards",
+        "text": "A full commitment to professionalism, confidentiality, and protecting the privacy and information of clients",
+        "icon": "scan-heart"
+      },
+      {
+        "id": 3,
+        "title": "Integrated practical solutions",
+        "text": "Effective and appropriate treatment for each case, with reliable consultations based on sound systematic principles",
+        "icon": "check-check"
+      },
+      {
+        "id": 4,
+        "title": "Monitoring and periodic reports",
+        "text": "Continuous oversight of cases and files with complete clarity in procedures and regular updates for clients",
+        "icon": "square-library"
+      },
+      {
+        "id": 5,
+        "title": "Effective communication and ongoing support",
+        "text": "Clear communication channels, quick response, and a constant commitment to customer service at all stages",
+        "icon": "head-set"
+      }
+    ]
+  }
+}

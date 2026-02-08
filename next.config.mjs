@@ -1,7 +1,11 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+/** اربط next-intl مع ملف الكونفيغ تبعه */
+const withNextIntl = createNextIntlPlugin("./i18n/request.js");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  reactCompiler: true
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
