@@ -36,7 +36,7 @@ export default function Page() {
       <FeaturesSection />
       <ServicesSection />
       <HowWeWorkSection />
-      {/* <CreditsSection /> */}
+      <CreditsSection />
     </>
   );
 }

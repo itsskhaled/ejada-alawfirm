@@ -185,5 +185,10 @@
         "icon": "trophy"
       }
     ]
+  },
+  "CreditsSection": {
+    "titleSection": "Accreditations",
+    "title": "Reliable credits",
+    "text": "We adhere to the highest professional and legal standards"
   }
 }
