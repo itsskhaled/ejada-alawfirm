@@ -1,7 +1,9 @@
 import AboutSection from "@/components/AboutSection";
 import AnimationHero from "@/components/AnimationHero";
+import CreditsSection from "@/components/Credits";
 import FeaturesSection from "@/components/Features";
 import HeroSection from "@/components/Hero";
+import HowWeWorkSection from "@/components/HowWeWork";
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/Services";
 
@@ -33,6 +35,8 @@ export default function Page() {
       <AboutSection />
       <FeaturesSection />
       <ServicesSection />
+      <HowWeWorkSection />
+      {/* <CreditsSection /> */}
     </>
   );
 }
