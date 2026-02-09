@@ -20,6 +20,7 @@ export default function HeroSection() {
 
     useGSAP(() => {
 
+        
         const headTextSplit = new SplitText(headTextRef.current, {
             type: "words",
             mask: "words"
@@ -29,7 +30,7 @@ export default function HeroSection() {
             mask: "words"
         });
 
-        console.log("lines:", SubheadTextSplit.words.length);
+        // console.log("lines:", SubheadTextSplit.words.length);
 
         const SupportingTextSplit = new SplitText(SupportingTextRef.current, {
             type: "lines",
@@ -102,10 +103,15 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-wrap w-full justify-center gap-1 md:gap-5 my-10 px-4">
                 <div className="ImageRef w-100 h-100">
-                    <Image src={JusticeWorkPlace} alt="JusticeWorkPlace" className="w-full h-full object-cover rounded-md" />
+                    <Image src={JusticeWorkPlace} alt="JusticeWorkPlace" width={900}
+                        height={700}
+                        className="w-full h-full object-cover rounded-md"
+                        sizes="(max-width: 640px) 92vw, (max-width: 1024px) 70vw, 600px" />
                 </div>
                 <div className="ImageRef w-150 h-100">
-                    <Image src={HandShake} alt="HandShake" className="w-full h-full object-cover rounded-md" />
+                    <Image src={HandShake} alt="HandShake"
+                        className="object-cover rounded-md w-full h-full"
+                        sizes="(max-width: 640px) 92vw, (max-width: 1024px) 70vw, 600px" />
                 </div>
             </div>
         </section>
