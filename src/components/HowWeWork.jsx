@@ -109,7 +109,7 @@ export default function HowWeWorkSection() {
                             trigger: card,
                             start: "top 30%",
                             toggleActions: "play none none none",
-                            markers: true
+                            // markers: true
                         }
                     }, "<")
                 })
