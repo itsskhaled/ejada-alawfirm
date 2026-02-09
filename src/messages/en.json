@@ -71,5 +71,107 @@
         "icon": "head-set"
       }
     ]
+  },
+  "ServicesSection": {
+    "titleSection": "Our Services",
+    "title": "We offer comprehensive legal and consulting services that meet the needs of individuals and organizations in accordance with approved regulations",
+    "itemsService": [
+      {
+        "id": 1,
+        "title": "Services for companies and commercial establishments",
+        "text": "This service covers company formation, preparation of internal regulations, official registration, coordination with authorities, and ongoing legal advice to ensure compliance with Saudi regulations and protect stakeholders interests",
+        "image": ""
+      },
+      {
+        "id": 2,
+        "title": "Money market systems",
+        "text": "We provide expert advice and follow-up on all capital market procedures, including the issuance of stocks and bonds, regulated trading, compliance with the Capital Market Authority's regulations, and protecting investors from legal risks, to ensure a transparent and fair financial market",
+        "image": ""
+      },
+      {
+        "id": 3,
+        "title": "Governance and Public Policies",
+        "text": "This service includes developing governance policies, defining the powers and responsibilities of managers and employees, establishing an internal control system, and ensuring the organization's compliance with national and international laws and regulations, which enhances transparency and accountability.",
+        "image": ""
+      },
+      {
+        "id": 4,
+        "title": "Drafting contracts and agreements",
+        "text": "This includes drafting all types of commercial and personal contracts and agreements, reviewing and legally auditing them, and ensuring clarity of obligations and rights, which reduces legal risks and facilitates the settlement of any future disputes",
+        "image": ""
+      },
+      {
+        "id": 5,
+        "title": "Arbitration and Mediation",
+        "text": "We offer arbitration and mediation services to resolve commercial and civil disputes, saving time and costs, while ensuring fair and binding solutions for both parties in accordance with the regulations adopted in the Kingdom",
+        "image": ""
+      },
+      {
+        "id": 6,
+        "title": "Division and settlement of estates",
+        "text": "This includes inventorying the estate's assets and liabilities, preparing a liquidation and distribution plan in accordance with Sharia and legal regulations, ensuring the protection of the heirs' rights and minimizing potential disputes between the parties",
+        "image": ""
+      },
+      {
+        "id": 7,
+        "title": "Endowments and Wills",
+        "text": "We provide legal advice for drafting endowments and wills, ensuring their proper implementation, organizing their management and investment, and protecting the rights of beneficiaries in accordance with Saudi regulations and Sharia controls",
+        "image": ""
+      },
+      {
+        "id": 8,
+        "title": "Legal Consultations",
+        "text": "This service includes providing expert legal opinions, risk assessment, clarifying rights and obligations, and supporting clients in making the right decisions to ensure their interests are protected in accordance with applicable laws",
+        "image": ""
+      },
+      {
+        "id": 9,
+        "title": "Zakat and tax consultations",
+        "text": "We offer professional solutions for tax and zakat planning, reporting, ensuring compliance with financial regulations, and avoiding violations, thus achieving legal and financial security for clients",
+        "image": ""
+      },
+      {
+        "id": 10,
+        "title": "Litigation and Dispute Resolution",
+        "text": "Providing litigation services before courts and judicial bodies, drafting lawsuits and objections, negotiating amicable settlements, and ensuring the protection of legal rights in the best legal ways",
+        "image": ""
+      },
+      {
+        "id": 11,
+        "title": "Regulations and Legislation",
+        "text": "We provide services for drafting internal regulations and policies to ensure the organization of work, compliance with local and international laws, and protection of the establishment from legal risks",
+        "image": ""
+      },
+      {
+        "id": 12,
+        "title": "Documentation and registration of real estate",
+        "text": "The service includes documenting contracts and transactions, registering ownership and real rights, and the regulatory procedures to ensure legal protection and avoid future disputes",
+        "image": ""
+      },
+      {
+        "id": 13,
+        "title": "intellectual property",
+        "text": "We offer patent, copyright, and trademark registration services, as well as legal advice to ensure that innovations are protected and commercially utilized, preventing any unlawful use",
+        "image": ""
+      },
+      {
+        "id": 14,
+        "title": "Foreign investment",
+        "text": "This service includes providing legal advice on foreign investment, registering foreign companies, complying with investment regulations, and protecting investors' rights from any legal or regulatory complications",
+        "image": ""
+      },
+      {
+        "id": 15,
+        "title": "Work Regulations",
+        "text": "This includes drafting employment contracts, preparing internal regulations, providing advice on the legal obligations of employees and employers, and ensuring a regulated and safe work environment",
+        "image": ""
+      },
+      {
+        "id": 16,
+        "title": "Implementation Services",
+        "text": "We provide legal claims follow-up services, filing enforcement lawsuits, dealing with judicial authorities to ensure the collection of rights, and settling enforcement-related disputes in the best legal ways",
+        "image": ""
+      }
+    ]
   }
 }

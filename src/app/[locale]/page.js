@@ -3,9 +3,9 @@ import AnimationHero from "@/components/AnimationHero";
 import FeaturesSection from "@/components/Features";
 import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import ServicesSection from "@/components/Services";
 
 export default function Page() {
-
   return (
     <>
       <Navbar />
@@ -32,6 +32,7 @@ export default function Page() {
       </div>
       <AboutSection />
       <FeaturesSection />
+      <ServicesSection />
     </>
   );
 }
