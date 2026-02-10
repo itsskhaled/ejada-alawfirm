@@ -190,5 +190,51 @@
     "titleSection": "Accreditations",
     "title": "Reliable credits",
     "text": "We adhere to the highest professional and legal standards"
+  },
+  "TeamSection": {
+    "titleSection": "Team",
+    "title": "Elite Lawyers",
+    "text": "We put our established legal expertise at the service of our clients"
+  },
+  "itemsTeam": [],
+  "QuestionsSection": {
+    "titleSection": "FAQ",
+    "itemsQuestions": [
+      {
+        "id": 1,
+        "Question": "What legal services does Ejadah offer?",
+        "Answer": "We offer comprehensive legal services including legal advice, drafting and reviewing contracts, company formation, litigation before judicial authorities, arbitration and mediation, governance, zakat and tax advice, and services for individuals and companies. Visit our services for more information"
+      },
+      {
+        "id": 2,
+        "Question": "How can I request legal advice?",
+        "Answer": "You can request a consultation via the website form or contact us directly by phone or WhatsApp to schedule a suitable appointment."
+      },
+      {
+        "id": 3,
+        "Question": "Do you offer your services to individuals and companies?",
+        "Answer": "Yes, we offer our legal services to individuals, entrepreneurs, small and medium-sized enterprises, as well as large corporations"
+      },
+      {
+        "id": 4,
+        "Question": "Is it possible to get legal advice remotely?",
+        "Answer": "Yes, we provide remote legal advice via telephone or video meetings to facilitate access to our services"
+      },
+      {
+        "id": 5,
+        "Question": "How long does it take to process a legal case or request?",
+        "Answer": "The duration varies depending on the type and complexity of the case, and the client is provided with an initial time estimate after studying the case"
+      },
+      {
+        "id": 6,
+        "Question": "Is the information kept confidential?",
+        "Answer": "All information and documents submitted are subject to strict confidentiality in accordance with professional ethics and applicable regulations"
+      },
+      {
+        "id": 7,
+        "Question": "How are legal service fees determined?",
+        "Answer": "The fees are determined based on the type of service and the amount of work required, and are clearly agreed upon with the client before work begins"
+      }
+    ]
   }
 }

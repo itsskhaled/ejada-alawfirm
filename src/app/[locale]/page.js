@@ -6,6 +6,8 @@ import HeroSection from "@/components/Hero";
 import HowWeWorkSection from "@/components/HowWeWork";
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/Services";
+import TeamSection from "@/components/Team";
+import QuestionsSection from "@/components/Questions";
 
 export default function Page() {
   return (
@@ -37,6 +39,8 @@ export default function Page() {
       <ServicesSection />
       <HowWeWorkSection />
       <CreditsSection />
+      <TeamSection />
+      <QuestionsSection/>
     </>
   );
 }

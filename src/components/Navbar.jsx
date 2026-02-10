@@ -23,7 +23,7 @@ export default function Navbar() {
 
   const headerRef = useRef(null);
   const navRef = useRef(null); // Desktop links container
-  const mobileNavRef = useRef(null); // ✅ Mobile links container (NEW)
+  const mobileNavRef = useRef(null); // Mobile links container
 
   useGSAP(() => {
     // ===== Mobile Menu (panel + X) =====
@@ -69,6 +69,7 @@ export default function Navbar() {
     tlRef.current = tl;
     tl.progress(0).pause();
 
+    // ===== Links color change on sections (About + Team) =====
     const desktopLinks = navRef.current?.querySelectorAll("a") || [];
     const mobileLinks = mobileNavRef.current?.querySelectorAll("a") || [];
     const allLinks = [...desktopLinks, ...mobileLinks];
@@ -77,24 +78,46 @@ export default function Navbar() {
 
     gsap.set(allLinks, { color: "#000" });
 
-    ScrollTrigger.create({
-      trigger: "#about-section",
-      start: "top 80px",
-      end: "bottom 80px",
+    const sections = ["#about-section", "#team-section"];
+    let activeCount = 0;
 
-      onEnter: () => {
-        gsap.to(allLinks, { color: "#fff", duration: 0.25, ease: "power2.out" });
-      },
-      onLeave: () => {
-        gsap.to(allLinks, { color: "#000", duration: 0.25, ease: "power2.out" });
-      },
-      onEnterBack: () => {
-        gsap.to(allLinks, { color: "#fff", duration: 0.25, ease: "power2.out" });
-      },
-      onLeaveBack: () => {
-        gsap.to(allLinks, { color: "#000", duration: 0.25, ease: "power2.out" });
-      },
-    });
+    const setLinksColor = () => {
+      gsap.to(allLinks, {
+        color: activeCount > 0 ? "#fff" : "#000",
+        duration: 0.25,
+        ease: "power2.out",
+        overwrite: "auto",
+      });
+    };
+
+    const triggers = sections.map((selector) =>
+      ScrollTrigger.create({
+        trigger: selector,
+        start: "top 80px",
+        end: "bottom 80px",
+        onEnter: () => {
+          activeCount++;
+          setLinksColor();
+        },
+        onLeave: () => {
+          activeCount = Math.max(0, activeCount - 1);
+          setLinksColor();
+        },
+        onEnterBack: () => {
+          activeCount++;
+          setLinksColor();
+        },
+        onLeaveBack: () => {
+          activeCount = Math.max(0, activeCount - 1);
+          setLinksColor();
+        },
+      })
+    );
+
+    // Cleanup: kill only our triggers
+    return () => {
+      triggers.forEach((tr) => tr?.kill());
+    };
   }, []);
 
   useEffect(() => {
@@ -137,13 +160,13 @@ export default function Navbar() {
             <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
               {t("Home")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="#about-section">
               {t("About")}
             </a>
             <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
               {t("Service")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="#team-section">
               {t("Team")}
             </a>
             <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
@@ -184,18 +207,17 @@ export default function Navbar() {
           ref={panelRef}
           className="lg:hidden mt-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow overflow-hidden opacity-0 -translate-y-6 pointer-events-none"
         >
-          {/* ✅ ref هنا عشان نغير لون الروابط كمان بالموبايل */}
           <div ref={mobileNavRef} className="px-5 py-5 flex flex-col gap-4">
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">
               {t("Home")}
             </a>
-            <a data-menu-item href="#" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="#about-section" onClick={closeMenu} className="py-2">
               {t("About")}
             </a>
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">
               {t("Service")}
             </a>
-            <a data-menu-item href="#" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="#team-section" onClick={closeMenu} className="py-2">
               {t("Team")}
             </a>
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">
