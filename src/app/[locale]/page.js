@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/Services";
 import TeamSection from "@/components/Team";
 import QuestionsSection from "@/components/Questions";
+import ContactSection from "@/components/Contact";
 
 export default function Page() {
   return (
@@ -40,7 +41,8 @@ export default function Page() {
       <HowWeWorkSection />
       <CreditsSection />
       <TeamSection />
-      <QuestionsSection/>
+      <QuestionsSection />
+      <ContactSection />
     </>
   );
 }

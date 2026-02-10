@@ -125,7 +125,7 @@ export default function HowWeWorkSection() {
         })
     })
     return (
-        <section ref={containerRef} className="w-full py-35 px-20">
+        <section ref={containerRef} className="w-full py-35 px-10 md:px-20">
             <div>
                 <div className="flex flex-wrap justify-center lg:justify-between gap-10">
                     <div className="w-full max-w-xl flex flex-col gap-5">

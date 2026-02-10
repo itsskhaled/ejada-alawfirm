@@ -136,7 +136,7 @@ export default function Navbar() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <div className="fixed top-5 left-0 right-0 z-50">
+    <div className="fixed top-5 left-0 right-0 z-9999">
       <div className="mx-auto max-w-7xl px-3">
         <header
           ref={headerRef}

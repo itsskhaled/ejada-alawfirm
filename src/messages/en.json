@@ -236,5 +236,55 @@
         "Answer": "The fees are determined based on the type of service and the amount of work required, and are clearly agreed upon with the client before work begins"
       }
     ]
+  },
+  "ContactSection": {
+    "titleSection": "Contact us",
+    "title": "Your legal consultation starts here",
+    "text": "Our legal team is ready to follow up on your case and provide appropriate advice with the utmost professionalism",
+    "name": "Name",
+    "phone": "Mobile number",
+    "email": "E-mail",
+    "RequiredService": "Required service",
+    "CaseDetails": "Case details",
+    "typeOfService": "Type of Service",
+    "submit": "Send",
+    "placeholder": "Write down the details of the case...",
+    "itemsContact": [
+      { "id": 1, "title": "Contact us", "info": "920008433", "icon": "phone" },
+      {
+        "id": 2,
+        "title": "e-mail",
+        "info": "info@ejadalawfirm.sa",
+        "icon": "mail"
+      },
+      {
+        "id": 3,
+        "title": "the site",
+        "info": "Riyadh - Al Narjis District - Rabah Al Lakhmi Street",
+        "icon": "map-pin"
+      }
+    ],
+    "services": [
+      {
+        "id": 1,
+        "title": "Services for companies and commercial establishments"
+      },
+      { "id": 2, "title": "Money market systems" },
+      { "id": 3, "title": "Governance and Public Policies" },
+      { "id": 4, "title": "Drafting contracts and agreements" },
+      { "id": 5, "title": "Arbitration and Mediation" },
+      { "id": 6, "title": "Division and settlement of estates" },
+      { "id": 7, "title": "Endowments and Wills" },
+      { "id": 8, "title": "Legal Consultations" },
+      { "id": 9, "title": "Zakat and tax consultations" },
+      { "id": 10, "title": "Litigation and Dispute Resolution" },
+      { "id": 11, "title": "Regulations and Legislation" },
+      { "id": 12, "title": "Documentation and registration of real estate" },
+      { "id": 13, "title": "intellectual property" },
+      { "id": 14, "title": "Foreign investment" },
+      { "id": 15, "title": "Work Regulations" },
+      { "id": 16, "title": "Implementation Services" },
+      { "id": 17, "title": "Other" }
+    ]
   }
 }
