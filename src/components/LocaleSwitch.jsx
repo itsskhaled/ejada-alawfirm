@@ -12,9 +12,9 @@ export default function LocaleSwitch() {
 
   const onToggle = () => {
     const segments = pathname.split("/");
-    segments[1] = nextLocale;         // /ar/... -> /en/...
+    segments[1] = nextLocale;        
     router.push(segments.join("/"));
-    router.refresh();                 // مهم أحيانًا مع Next 16
+    router.refresh();                
   };
 
   return (

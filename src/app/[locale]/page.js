@@ -9,6 +9,8 @@ import ServicesSection from "@/components/Services";
 import TeamSection from "@/components/Team";
 import QuestionsSection from "@/components/Questions";
 import ContactSection from "@/components/Contact";
+import CTASection from "@/components/CTA";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -43,6 +45,8 @@ export default function Page() {
       <TeamSection />
       <QuestionsSection />
       <ContactSection />
+      {/* <CTASection /> */}
+      <Footer />
     </>
   );
 }

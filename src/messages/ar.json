@@ -279,5 +279,38 @@
       { "id": 16, "title": "خدمات التنفيذ" },
       { "id": 17, "title": "أُخرى" }
     ]
+  },
+  "Footer": {
+    "home": "الرئيسية",
+    "aboutus": "عن الشركة",
+    "features": "مميزاتنا",
+    "services": "خدماتنا",
+    "work": "كيف نعمل",
+    "caedits": "اعتماداتنا",
+    "team": "فريقنا",
+    "FAQ": "FAQ",
+    "contact": "تواصل معنا",
+    "infoFooter": "نضع خبرتنا القانونية في خدمة عملائنا، ونعمل على تقديم استشارات وحلول قانونية متكاملة تساعدهم على اتخاذ القرارات الصحيحة بثقة ووضوح",
+    "itemsFooter": [
+      { "id": 1, "title": "إتصل بنا", "info": "920008433", "icon": "phone" },
+      {
+        "id": 2,
+        "title": "البريد الإلكتروني",
+        "info": "info@ejadalawfirm.sa",
+        "icon": "mail"
+      },
+      {
+        "id": 3,
+        "title": "الموقع",
+        "info": "الرياض - حي النرجس - شارع رباح اللخمي",
+        "icon": "map-pin"
+      }
+    ],
+    "itemsSocialMedia": [
+      { "id": 1, "icon": "instagram" },
+      { "id": 2, "icon": "twitter" },
+      { "id": 3, "icon": "linkedin" },
+      { "id": 4, "icon": "map" }
+    ]
   }
 }

@@ -167,6 +167,7 @@ export default function AboutSection() {
             id="about-section"
             className="w-full bg-[#0c0c0c] relative py-40"
         >
+            
             <div className="flex flex-col w-full items-center gap-10">
                 <div
                     ref={titleSectionRef}

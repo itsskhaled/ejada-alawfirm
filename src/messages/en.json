@@ -286,5 +286,36 @@
       { "id": 16, "title": "Implementation Services" },
       { "id": 17, "title": "Other" }
     ]
+  },
+  "Footer": {
+    "home": "Home",
+    "aboutus": "About us",
+    "features": "Our Advantages",
+    "services": "Our services",
+    "work": "How We Work",
+    "caedits": "Our Accreditations",
+    "team": "Our Team",
+    "FAQ": "FAQ",
+    "contact": "Contact us",
+    "infoFooter": "We put our legal expertise at the service of our clients, and work to provide integrated legal advice and solutions that help them make the right decisions with confidence and clarity",
+    "itemsFooter": [
+      { "id": 1, "info": "920008433", "icon": "phone" },
+      {
+        "id": 2,
+        "info": "info@ejadalawfirm.sa",
+        "icon": "mail"
+      },
+      {
+        "id": 3,
+        "info": "Riyadh - Al Narjis District - Rabah Al Lakhmi Street",
+        "icon": "map-pin"
+      }
+    ],
+    "itemsSocialMedia": [
+      { "id": 1, "icon": "instagram" },
+      { "id": 2, "icon": "twitter" },
+      { "id": 3, "icon": "linkedin" },
+      { "id": 4, "icon": "map" }
+    ]
   }
 }
