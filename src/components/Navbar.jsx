@@ -205,7 +205,14 @@ export default function Navbar() {
         {/* Mobile drop-down panel */}
         <div
           ref={panelRef}
-          className="lg:hidden mt-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow overflow-hidden opacity-0 -translate-y-6 pointer-events-none"
+          className="
+    lg:hidden
+    absolute left-0 right-0 top-full
+    mt-3
+    rounded-2xl bg-white/10 backdrop-blur-xl
+    border border-white/20 shadow overflow-hidden
+    opacity-0 -translate-y-6 pointer-events-none
+  "
         >
           <div ref={mobileNavRef} className="px-5 py-5 flex flex-col gap-4">
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">

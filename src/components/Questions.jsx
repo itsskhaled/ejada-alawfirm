@@ -80,7 +80,7 @@ export default function QuestionsSection() {
                         const isOpen = activeId === item.id;
 
                         return (
-                            <div ref={el => questionsRef.current[i] = el} key={i} className="border-b border-black/10 z-90">
+                            <div ref={el => questionsRef.current[i] = el} key={i} className="border-b border-black/10">
 
                                 <button
                                     type="button"

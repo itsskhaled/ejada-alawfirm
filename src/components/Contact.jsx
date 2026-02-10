@@ -127,7 +127,7 @@ export default function ContactSection() {
         })
     })
     return (
-        <section ref={containerRef} className="w-full relative py-35 px-10 md:px-20">
+        <section ref={containerRef} className="w-full relative py-35 px-10 md:px-20 ">
             <div>
                 <div className="flex flex-col md:flex-row justify-center lg:justify-between gap-10">
                     <div className="w-full max-w-xl flex flex-col gap-5">
