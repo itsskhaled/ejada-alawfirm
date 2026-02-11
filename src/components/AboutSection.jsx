@@ -79,7 +79,7 @@ export default function AboutSection() {
                         opacity: 0,
                         ease: "power2.out",
                         duration: 0.6,
-                        stagger: 0.015,
+                        stagger: 0.05,
                     },
                     "<35%"
                 );

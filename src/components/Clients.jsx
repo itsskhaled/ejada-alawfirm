@@ -1,3 +1,4 @@
+"use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import ClientPhoto1 from "@/app/Image/Clients/1.webp";
@@ -18,18 +19,38 @@ import ClientPhoto15 from "@/app/Image/Clients/15.png";
 import ClientPhoto16 from "@/app/Image/Clients/16.png";
 import ClientPhoto17 from "@/app/Image/Clients/17.png";
 import ClientPhoto18 from "@/app/Image/Clients/18.png";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
+gsap.registerPlugin(useGSAP);
 export default function ClientsSection() {
-    const t = useTranslations("ClientsSection")
+    const t = useTranslations("ClientsSection");
+
+    const FlashingCircleRef = useRef(null);
+
+    useGSAP(() => {
+        gsap.fromTo(
+            FlashingCircleRef.current,
+            { scale: 1, opacity: 0.5 },
+            {
+                scale: 1.5,
+                opacity: 1,
+                repeat: -1,
+                duration: 0.6,
+                ease: "sine.inOut",
+                yoyo: true,
+            }
+        );
+    })
     return (
         <section className="w-full relative bg-neutral-100 py-35">
             <div className="flex flex-col w-full items-center gap-5">
                 <div
-                    // ref={titleSectionRef}
                     className="flex gap-2 items-center text-center text-2xl font-bold px-6 py-4 bg-black text-white rounded-xl select-none whitespace-nowrap overflow-hidden my-5"
                 >
                     <div
-                        // ref={FlashingCircleRef}
+                        ref={FlashingCircleRef}
                         className="w-3 h-3 bg-[#f9bb00] rounded-full"
                     />
                     <h1>{t("titleSection")}</h1>

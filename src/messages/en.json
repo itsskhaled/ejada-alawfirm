@@ -196,7 +196,78 @@
     "title": "Elite Lawyers",
     "text": "We put our established legal expertise at the service of our clients"
   },
-  "itemsTeam": [],
+  "itemsTeam": [
+    {
+      "id": 1,
+      "name": "Mr. Dheeb bin Dhaifallah Al-Mutairi",
+      "position": [
+        "CEO",
+        "Lawyer",
+        "Certified Notary",
+        "Registry of Real Estate"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mr. Hussein AL Rifai",
+      "position": "Legal Consultant"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Ayman Al Hindawi",
+      "position": "Legal Consultant"
+    },
+    {
+      "id": 4,
+      "name": "Mr. Raji Mahayri",
+      "position": ["Consultant Structuring", "Financial and Banking"]
+    },
+    {
+      "id": 5,
+      "name": "Prof.Faheem Ayed",
+      "position": "Zakat & Tax Consultant in Saudi Arabia"
+    },
+    {
+      "id": 6,
+      "name": "Rayan Almutairi",
+      "position": "Lawyer"
+    },
+    {
+      "id": 7,
+      "name": "Avdullah Bin Saud",
+      "position": "Lawyer"
+    },
+    {
+      "id": 8,
+      "name": "Ibrahim Al Tamimi",
+      "position": "Lawyer"
+    },
+    {
+      "id": 9,
+      "name": "Avdullah Al-Qahtani",
+      "position": "Lawyer"
+    },
+    {
+      "id": 10,
+      "name": "Mohammed Mubarak",
+      "position": "Lawyer"
+    },
+    {
+      "id": 11,
+      "name": "Rihab Ba Wazeer",
+      "position": "Lawyer"
+    },
+    {
+      "id": 12,
+      "name": "Manal Al Sunaidi",
+      "position": "Lawyer"
+    },
+    {
+      "id": 13,
+      "name": "Nadia Al Enazi",
+      "position": "Legal Specialist"
+    }
+  ],
   "QuestionsSection": {
     "titleSection": "FAQ",
     "itemsQuestions": [
@@ -331,6 +402,52 @@
     "titleSection": "Why work with us?",
     "title": "The choice that makes all the difference!",
     "ourCompany": "ejada alawfirm",
-    "otherCompany": "Other companies"
+    "otherCompany": "Other companies",
+    "FeaturesOurCompany": [
+      { "id": 1, "title": "Qualified Team", "icon": "badge-check" },
+      {
+        "id": 2,
+        "title": "High Professional and Ethical Standards",
+        "icon": "badge-check"
+      },
+      {
+        "id": 3,
+        "title": "Integrated Practical Solutions",
+        "icon": "badge-check"
+      },
+      {
+        "id": 4,
+        "title": "Ongoing Follow-up and Periodic Reports",
+        "icon": "badge-check"
+      },
+      {
+        "id": 5,
+        "title": "Effective Communication and Continuous Support",
+        "icon": "badge-check"
+      },
+      { "id": 6, "title": "Added Value", "icon": "badge-check" }
+    ],
+    "FeaturesOtherCompanies": [
+      { "id": 1, "title": "Slow Case Response", "icon": "badge-minus" },
+      { "id": 2, "title": "Traditional Case Handling", "icon": "badge-minus" },
+      { "id": 3, "title": "Lack of Cost Transparency", "icon": "badge-minus" },
+      {
+        "id": 4,
+        "title": "Absence of Periodic Reporting",
+        "icon": "badge-minus"
+      },
+      { "id": 5, "title": "Partial Legal Solutions", "icon": "badge-minus" },
+      {
+        "id": 6,
+        "title": "Follow-up Only After Contract Signing",
+        "icon": "badge-minus"
+      }
+    ]
+  },
+  "CTASection": {
+    "title": "Do You Need Reliable Legal Consultation?",
+    "text": "Our team is ready to review your case and provide appropriate legal solutions in accordance with applicable regulations.",
+    "btnBook": "Book Your Consultation Now",
+    "btnColl": "Contact Us"
   }
 }

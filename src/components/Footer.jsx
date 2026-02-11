@@ -27,94 +27,29 @@ export default function Footer() {
         "map": Map
     };
 
-    const containerRef = useRef(null);
-    const logRef = useRef(null);
-    const lineRef = useRef(null);
-    const infoRef = useRef(null);
-    const itemsInfoContactRef = useRef([]);
-    const SocialMediaRef = useRef([]);
-
-    useGSAP(() => {
-        const mm = gsap.matchMedia();
-        mm.add({
-            isMobile: "(max-width: 640px)",
-            isDesktop: "(min-width: 641px)",
-        }, (context) => {
-            const { isMobile, isDesktop } = context.conditions;
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: isDesktop ? "top 80%" : "top 10%",
-                    // markers: true
-                }
-            });
-            const infoSplit = new SplitText(infoRef.current, {
-                type: "words",
-                mask: "words"
-            })
-
-            const links = gsap.utils.toArray(".linksRef");
-
-            tl.from(logRef.current, {
-                opacity: 0,
-                duration: 1,
-                ease: "power2.out"
-            })
-                .from(links, {
-                    opacity: 0,
-                    duration: 1,
-                    stagger: { each: .05 },
-                    ease: "power1.out"
-                }, "<50%")
-                .from(lineRef.current, {
-                    scaleX: 0,
-                    duration: 1.5
-                }, "<")
-                .from(infoSplit.words, {
-                    y: 50,
-                    opacity: 0,
-                    duration: .7,
-                    stagger: { ease: .05 },
-                    ease: "power2.out",
-                }, "<20%")
-                .from(itemsInfoContactRef.current, {
-                    x: 100,
-                    opacity: 0,
-                    duration: .5,
-                    stagger: { ease: .05 },
-                    ease: "power2.out",
-                }, "<")
-                .from(SocialMediaRef.current, {
-                    y: 100,
-                    opacity: 0,
-                    duration: .5,
-                    stagger: { ease: .05 },
-                    ease: "power2.out",
-                }, "<")
-        })
-    })
+   
     return (
-        <section ref={containerRef} className="w-full relative py-20 bg-[#0c0c0c] rounded-t-2xl">
+        <section className="w-full relative py-20 bg-[#0c0c0c] rounded-t-2xl">
             <div className="flex flex-wrap w-full justify-between px-30 items-center">
-                <div ref={logRef} className="w-50 h-50">
+                <div className="w-50 h-50">
                     <Image src={logoFooter} alt="logoFooter" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex justify-center md:justify-start gap-20 flex-wrap text-white">
-                    <div className="linksRef">
+                    <div>
                         <ul>
                             <li className="my-3">{t("home")}</li>
                             <li className="my-3">{t("aboutus")}</li>
                             <li className="my-3">{t("features")}</li>
                         </ul>
                     </div>
-                    <div className="linksRef">
+                    <div>
                         <ul>
                             <li className="my-3">{t("services")}</li>
                             <li className="my-3">{t("work")}</li>
                             <li className="my-3">{t("caedits")}</li>
                         </ul>
                     </div>
-                    <div className="linksRef">
+                    <div>
                         <ul>
                             <li className="my-3">{t("team")}</li>
                             <li className="my-3">{t("FAQ")}</li>
@@ -123,17 +58,17 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <hr ref={lineRef} className="text-white opacity-20 mx-5 md:mx-20 my-10" />
+            <hr className="text-white opacity-20 mx-5 md:mx-20 my-10" />
 
             <div className="flex w-full justify-center md:justify-between flex-wrap px-10 md:px-30 items-start gap-5">
                 <div>
-                    <h1 ref={infoRef} className="text-white md:w-80">{t("infoFooter")}</h1>
+                    <h1 className="text-white md:w-80">{t("infoFooter")}</h1>
                 </div>
                 <div>
                     {items.map((item, i) => {
                         const Icon = ICONS[item.icon];
                         return (
-                            <div ref={el => itemsInfoContactRef.current[i] = el} key={i} className="flex gap-2 items-center">
+                            <div key={i} className="flex gap-2 items-center">
                                 {Icon && <Icon className="px-2 py-2 w-10 md:w-10 h-10 md:h-10 text-white" />}
                                 <div className="text-white">
                                     <p className="text-xs md:text-base ">{item.info}</p>
@@ -146,7 +81,7 @@ export default function Footer() {
                     {SocialMedia.map((item, i) => {
                         const Icon = IconSocialMedia[item.icon];
                         return (
-                            <div ref={el => SocialMediaRef.current[i] = el} key={i} className="flex gap-2">
+                            <div key={i} className="flex gap-2">
                                 {Icon && <Icon className="px-2 py-2 w-10 md:w-10 h-10 md:h-10 text-white" />}
                             </div>
                         );
