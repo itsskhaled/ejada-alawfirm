@@ -317,5 +317,20 @@
       { "id": 3, "icon": "linkedin" },
       { "id": 4, "icon": "map" }
     ]
+  },
+  "HeroAboutSection": {
+    "titleSection": "About us",
+    "title": "Legal expertise that makes a real difference",
+    "text": "At our law and legal consultancy firm, we believe that legal work is not just about representation in court, but a partnership built on trust, commitment, and results",
+    "subText": "We offer comprehensive legal solutions for individuals and companies, based on a deep understanding of regulations and legislation, and a thorough analysis of each case to achieve the best possible results for our clients"
+  },
+  "ClientsSection": {
+    "titleSection": "Our Clients"
+  },
+  "ComparisonSection": {
+    "titleSection": "Why work with us?",
+    "title": "The choice that makes all the difference!",
+    "ourCompany": "ejada alawfirm",
+    "otherCompany": "Other companies"
   }
 }

@@ -9,11 +9,17 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const pathname = usePathname();
+
+  // ✅ اعتبر الهوم: / أو /ar أو /en
+  const isHome = pathname === "/" || pathname === "/ar" || pathname === "/en";
+
   const [open, setOpen] = useState(false);
 
   const panelRef = useRef(null);
@@ -21,104 +27,124 @@ export default function Navbar() {
   const lineBottomRef = useRef(null);
   const tlRef = useRef(null);
 
-  const headerRef = useRef(null);
   const navRef = useRef(null); // Desktop links container
   const mobileNavRef = useRef(null); // Mobile links container
 
-  useGSAP(() => {
-    // ===== Mobile Menu (panel + X) =====
-    gsap.set(panelRef.current, {
-      y: -24,
-      autoAlpha: 0,
-      pointerEvents: "none",
-    });
-
-    gsap.set([lineTopRef.current, lineBottomRef.current], {
-      transformOrigin: "50% 50%",
-      xPercent: -50,
-      yPercent: -50,
-      left: "50%",
-      top: "50%",
-    });
-
-    gsap.set(lineTopRef.current, { y: -6, rotation: 0 });
-    gsap.set(lineBottomRef.current, { y: 6, rotation: 0 });
-
-    const tl = gsap.timeline({ paused: true });
-
-    tl.to(lineTopRef.current, { y: 0, rotation: 45, duration: 0.25, ease: "power2.out" }, 0)
-      .to(lineBottomRef.current, { y: 0, rotation: -45, duration: 0.25, ease: "power2.out" }, 0)
-      .to(
-        panelRef.current,
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.35,
-          ease: "power3.out",
-          pointerEvents: "auto",
-        },
-        0.05
-      )
-      .fromTo(
-        panelRef.current.querySelectorAll("[data-menu-item]"),
-        { y: -8, autoAlpha: 0 },
-        { y: 0, autoAlpha: 1, duration: 0.25, ease: "power2.out", stagger: 0.06 },
-        0.15
-      );
-
-    tlRef.current = tl;
-    tl.progress(0).pause();
-
-    // ===== Links color change on sections (About + Team) =====
-    const desktopLinks = navRef.current?.querySelectorAll("a") || [];
-    const mobileLinks = mobileNavRef.current?.querySelectorAll("a") || [];
-    const allLinks = [...desktopLinks, ...mobileLinks];
-
-    if (!allLinks.length) return;
-
-    gsap.set(allLinks, { color: "#000" });
-
-    const sections = ["#about-section", "#team-section"];
-    let activeCount = 0;
-
-    const setLinksColor = () => {
-      gsap.to(allLinks, {
-        color: activeCount > 0 ? "#fff" : "#000",
-        duration: 0.25,
-        ease: "power2.out",
-        overwrite: "auto",
+  useGSAP(
+    () => {
+      // ===== Mobile Menu (panel + X) =====
+      gsap.set(panelRef.current, {
+        y: -24,
+        autoAlpha: 0,
+        pointerEvents: "none",
       });
-    };
 
-    const triggers = sections.map((selector) =>
-      ScrollTrigger.create({
-        trigger: selector,
-        start: "top 80px",
-        end: "bottom 80px",
-        onEnter: () => {
-          activeCount++;
-          setLinksColor();
-        },
-        onLeave: () => {
-          activeCount = Math.max(0, activeCount - 1);
-          setLinksColor();
-        },
-        onEnterBack: () => {
-          activeCount++;
-          setLinksColor();
-        },
-        onLeaveBack: () => {
-          activeCount = Math.max(0, activeCount - 1);
-          setLinksColor();
-        },
-      })
-    );
+      gsap.set([lineTopRef.current, lineBottomRef.current], {
+        transformOrigin: "50% 50%",
+        xPercent: -50,
+        yPercent: -50,
+        left: "50%",
+        top: "50%",
+      });
 
-    // Cleanup: kill only our triggers
-    return () => {
-      triggers.forEach((tr) => tr?.kill());
-    };
-  }, []);
+      gsap.set(lineTopRef.current, { y: -6, rotation: 0 });
+      gsap.set(lineBottomRef.current, { y: 6, rotation: 0 });
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.to(
+        lineTopRef.current,
+        { y: 0, rotation: 45, duration: 0.25, ease: "power2.out" },
+        0
+      )
+        .to(
+          lineBottomRef.current,
+          { y: 0, rotation: -45, duration: 0.25, ease: "power2.out" },
+          0
+        )
+        .to(
+          panelRef.current,
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.35,
+            ease: "power3.out",
+            pointerEvents: "auto",
+          },
+          0.05
+        )
+        .fromTo(
+          panelRef.current.querySelectorAll("[data-menu-item]"),
+          { y: -8, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: 0.25, ease: "power2.out", stagger: 0.06 },
+          0.15
+        );
+
+      tlRef.current = tl;
+      tl.progress(0).pause();
+
+      // ===== Links color change on sections (Home only) =====
+      const desktopLinks = navRef.current?.querySelectorAll("a") || [];
+      const mobileLinks = mobileNavRef.current?.querySelectorAll("a") || [];
+      const allLinks = [...desktopLinks, ...mobileLinks];
+
+      if (!allLinks.length) return;
+
+      // ✅ default اللون دايمًا أسود
+      gsap.set(allLinks, { color: "#000" });
+
+      // ✅ لا تفعّل ScrollTrigger إلا على الهوم
+      if (!isHome) return;
+
+      const sections = ["#about-section", "#team-section"];
+      let activeCount = 0;
+
+      const setLinksColor = () => {
+        gsap.to(allLinks, {
+          color: activeCount > 0 ? "#fff" : "#000",
+          duration: 0.25,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      };
+
+      const triggers = sections
+        .map((selector) => {
+          const el = document.querySelector(selector);
+          if (!el) return null;
+
+          return ScrollTrigger.create({
+            trigger: el,
+            start: "top 80px",
+            end: "bottom 80px",
+            onEnter: () => {
+              activeCount++;
+              setLinksColor();
+            },
+            onLeave: () => {
+              activeCount = Math.max(0, activeCount - 1);
+              setLinksColor();
+            },
+            onEnterBack: () => {
+              activeCount++;
+              setLinksColor();
+            },
+            onLeaveBack: () => {
+              activeCount = Math.max(0, activeCount - 1);
+              setLinksColor();
+            },
+          });
+        })
+        .filter(Boolean);
+
+      // Cleanup: kill only our triggers
+      return () => {
+        triggers.forEach((tr) => tr?.kill());
+      };
+    },
+    // ✅ مهم: لما تتغير الصفحة، يعيد تهيئة الـ triggers صح
+    [isHome]
+  );
 
   useEffect(() => {
     const tl = tlRef.current;
@@ -139,7 +165,6 @@ export default function Navbar() {
     <div className="fixed top-5 left-0 right-0 z-9999">
       <div className="mx-auto max-w-7xl px-3">
         <header
-          ref={headerRef}
           className="
             flex items-center justify-between
             rounded-2xl
@@ -157,10 +182,10 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <nav ref={navRef} className="hidden lg:flex items-center gap-10">
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/">
               {t("Home")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#about-section">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/About-us">
               {t("About")}
             </a>
             <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
@@ -206,13 +231,13 @@ export default function Navbar() {
         <div
           ref={panelRef}
           className="
-    lg:hidden
-    absolute left-0 right-0 top-full
-    mt-3
-    rounded-2xl bg-white/10 backdrop-blur-xl
-    border border-white/20 shadow overflow-hidden
-    opacity-0 -translate-y-6 pointer-events-none
-  "
+            lg:hidden
+            absolute left-0 right-0 top-full
+            mt-3
+            rounded-2xl bg-white/10 backdrop-blur-xl
+            border border-white/20 shadow overflow-hidden
+            opacity-0 -translate-y-6 pointer-events-none
+          "
         >
           <div ref={mobileNavRef} className="px-5 py-5 flex flex-col gap-4">
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">
