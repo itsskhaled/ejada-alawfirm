@@ -17,7 +17,6 @@ export default function Navbar() {
   const t = useTranslations("navbar");
   const pathname = usePathname();
 
-  // ✅ اعتبر الهوم: / أو /ar أو /en
   const isHome = pathname === "/" || pathname === "/ar" || pathname === "/en";
 
   const [open, setOpen] = useState(false);
@@ -27,12 +26,11 @@ export default function Navbar() {
   const lineBottomRef = useRef(null);
   const tlRef = useRef(null);
 
-  const navRef = useRef(null); // Desktop links container
-  const mobileNavRef = useRef(null); // Mobile links container
+  const navRef = useRef(null); 
+  const mobileNavRef = useRef(null);
 
   useGSAP(
     () => {
-      // ===== Mobile Menu (panel + X) =====
       gsap.set(panelRef.current, {
         y: -24,
         autoAlpha: 0,
@@ -83,17 +81,14 @@ export default function Navbar() {
       tlRef.current = tl;
       tl.progress(0).pause();
 
-      // ===== Links color change on sections (Home only) =====
       const desktopLinks = navRef.current?.querySelectorAll("a") || [];
       const mobileLinks = mobileNavRef.current?.querySelectorAll("a") || [];
       const allLinks = [...desktopLinks, ...mobileLinks];
 
       if (!allLinks.length) return;
 
-      // ✅ default اللون دايمًا أسود
       gsap.set(allLinks, { color: "#000" });
 
-      // ✅ لا تفعّل ScrollTrigger إلا على الهوم
       if (!isHome) return;
 
       const sections = ["#about-section", "#team-section"];
@@ -137,12 +132,11 @@ export default function Navbar() {
         })
         .filter(Boolean);
 
-      // Cleanup: kill only our triggers
+
       return () => {
         triggers.forEach((tr) => tr?.kill());
       };
     },
-    // ✅ مهم: لما تتغير الصفحة، يعيد تهيئة الـ triggers صح
     [isHome]
   );
 
@@ -188,10 +182,7 @@ export default function Navbar() {
             <a className="transition-opacity hover:opacity-100 opacity-90" href="/About-us">
               {t("About")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
-              {t("Service")}
-            </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#team-section">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/Team">
               {t("Team")}
             </a>
             <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
@@ -243,13 +234,10 @@ export default function Navbar() {
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">
               {t("Home")}
             </a>
-            <a data-menu-item href="#about-section" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/About-us" onClick={closeMenu} className="py-2">
               {t("About")}
             </a>
-            <a data-menu-item href="#" onClick={closeMenu} className="py-2">
-              {t("Service")}
-            </a>
-            <a data-menu-item href="#team-section" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/Team" onClick={closeMenu} className="py-2">
               {t("Team")}
             </a>
             <a data-menu-item href="#" onClick={closeMenu} className="py-2">

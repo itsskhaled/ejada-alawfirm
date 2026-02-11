@@ -193,7 +193,7 @@ function TeamCard({ member }) {
             ? [member.position]
             : [];
 
-    const photoSrc = TEAM_PHOTOS[member?.id]; // ✅ صورة العضو حسب id
+    const photoSrc = TEAM_PHOTOS[member?.id]; 
 
     return (
         <article className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 transition">
@@ -204,8 +204,6 @@ function TeamCard({ member }) {
                         alt={member?.name || "team member"}
                         fill
                         className="object-cover"
-                        // أو بدل السطر اللي فوق:
-                        // style={{ objectFit: "contain", objectPosition: "center bottom" }}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         priority={member?.id === 1}
                     />
