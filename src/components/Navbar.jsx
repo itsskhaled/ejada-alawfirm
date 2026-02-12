@@ -231,7 +231,7 @@ export default function Navbar() {
           "
         >
           <div ref={mobileNavRef} className="px-5 py-5 flex flex-col gap-4">
-            <a data-menu-item href="#" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/" onClick={closeMenu} className="py-2">
               {t("Home")}
             </a>
             <a data-menu-item href="/About-us" onClick={closeMenu} className="py-2">
