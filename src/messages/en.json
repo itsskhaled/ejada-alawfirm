@@ -449,5 +449,28 @@
     "text": "Our team is ready to review your case and provide appropriate legal solutions in accordance with applicable regulations.",
     "btnBook": "Book Your Consultation Now",
     "btnColl": "Contact Us"
+  },
+  "TeamHeroSection": {
+    "title": "Welcome to the Business Excellence Team",
+    "text": "Our team includes a select group of highly experienced and qualified lawyers and legal consultants who work as a team to provide accurate and effective legal solutions. We believe that every case deserves special attention and a well-thought-out strategy, so we are keen to combine practical experience with in-depth knowledge of systems and legislation to ensure the best results for our clients"
+  },
+  "OurNumberSection": {
+    "titleSection": "Our Numbers",
+    "title": "Numbers that reflect our experience",
+    "itemsNumber": [
+      {
+        "id": 1,
+        "number": "+160",
+        "text": "One million riyals was awarded in favor of our clients",
+        "icon": "saudi-riyal"
+      },
+      {
+        "id": 2,
+        "number": "+3000",
+        "text": "A case in which the verdict was in favor of our clients",
+        "icon": "file-check"
+      },
+      { "id": 3, "number": "%98", "text": "قضايا ناجحة", "icon": "book-check" }
+    ]
   }
 }
