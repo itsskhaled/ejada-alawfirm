@@ -363,10 +363,6 @@
     "aboutus": "About us",
     "features": "Our Advantages",
     "services": "Our services",
-    "work": "How We Work",
-    "caedits": "Our Accreditations",
-    "team": "Our Team",
-    "FAQ": "FAQ",
     "contact": "Contact us",
     "infoFooter": "We put our legal expertise at the service of our clients, and work to provide integrated legal advice and solutions that help them make the right decisions with confidence and clarity",
     "itemsFooter": [
@@ -471,6 +467,315 @@
         "icon": "file-check"
       },
       { "id": 3, "number": "%98", "text": "قضايا ناجحة", "icon": "book-check" }
+    ]
+  },
+  "BlogSection": {
+    "title": "Our Blogs",
+    "text": "Our legal blog provides specialized articles on regulations and legislation, commercial law, contracts, and dispute resolution, with the aim of promoting legal awareness and enabling our clients to make sound and informed decisions",
+    "itemsBlogs": [
+      {
+        "id": 1,
+        "slug": "official-vs-private-document-saudi-law",
+        "title": "The difference between an official editor and a regular editor in the Saudi proof system",
+        "excerpt": "The written document is one of the most important means of proof in legal disputes, as it may result in the creation of serious financial or legal obligations...",
+        "more": "Read more",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "The document is one of the most important means of proof in judicial disputes, as it may result in the creation of serious financial or legal obligations, and it may be the decisive factor in tipping the scales in favor of one of the litigants before the court. For this reason, the Saudi system of evidence has given special attention to regulating the provisions of documents, and has clearly distinguished between the official document and the ordinary document in terms of definition, evidentiary power and legal effect."
+          },
+          {
+            "type": "paragraph",
+            "text": "An official document is a document in which a public official or a person entrusted with a public service records what he has done or what he has received from the concerned parties, in accordance with the statutory procedures and within the limits of his authority and jurisdiction. The system of evidence has established special force for these documents, as Article Twenty-Six thereof stipulates that an official document is proof against everyone regarding what is recorded therein of matters that its issuer has done within the limits of his duties or that occurred from the concerned parties in his presence, unless its forgery is proven by the methods prescribed by law. It follows that an official document is considered conclusive proof, and the person relying on it is not required to prove its validity, and it cannot be challenged except by a claim of forgery in accordance with the prescribed statutory procedures."
+          },
+          {
+            "type": "paragraph",
+            "text": "As for the ordinary document, it is what the parties draw up between themselves and includes contracts, declarations and all other documents that do not meet the conditions set by the system for the official document, so it is considered an ordinary document from the point of view of the system. The system of evidence has regulated its validity in the text of Article Twenty-Nine, which stipulated that the ordinary document is evidence against the one who signed it, unless he explicitly denies what is attributed to him in terms of handwriting, signature, seal or fingerprint. If the signature is proven, the signatory is bound by everything contained in the document, and it is not accepted from him thereafter to claim lack of understanding, haste or ignorance of its content. And whoever is challenged with an ordinary document and discusses its subject before the court, it is not accepted from him to deny its validity thereafter."
+          },
+          {
+            "type": "paragraph",
+            "text": "It is clear from this that an ordinary document, despite its apparent simplicity, may create a full legal obligation when its attribution to the person who signed it is proven, and denying it may entail complex proof procedures and legal consequences that prolong the judicial dispute. Hence, the real difference between an official document and an ordinary document does not appear at the moment of signing, but rather becomes clearly evident when the dispute arises and the parties appear before the court, where the evidentiary power of each document and its effect in proving or disproving rights is determined."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "slug": "heir-share-joint-property",
+        "title": "Selling the heir's share in the jointly owned property",
+        "excerpt": "Does one of the heirs have the right to force the sale of the property through auction? The Civil Transactions Law came to resolve this type of dispute...",
+        "more": "Read more",
+        "content": [
+          {
+            "type": "qa",
+            "question": "Does one of the heirs have the right to force the sale of the property through auction?",
+            "answer": [
+              {
+                "type": "paragraph",
+                "text": "The Civil Transactions Law came to resolve this type of dispute with an explicit text that balances the interest of the party requesting the division and the rest of the partners, as stated in Article 628 of the Civil Transactions Law."
+              },
+              {
+                "type": "heading",
+                "text": "First: The content of the regulatory rule"
+              },
+              {
+                "type": "paragraph",
+                "text": "The second paragraph of Article (628) stipulates that a request by one of the partners to sell the property is not binding on the rest of the partners if it is possible to enable the requesting partner to obtain a fair value for his share without resorting to selling the entire property."
+              },
+              {
+                "type": "paragraph",
+                "text": "The important thing is not just the partner's desire to sell, but rather the extent to which harm has been caused or not."
+              },
+              {
+                "type": "heading",
+                "text": "Secondly: Preventing forced sale to protect the remaining partners"
+              },
+              {
+                "type": "paragraph",
+                "text": "The system confirmed that it does not obligate partners to sell at auction when the party requesting the division can sell his share for a value no less than if the entire property were sold."
+              },
+              {
+                "type": "paragraph",
+                "text": "This text prevents the auction sale from being used as a means of exerting pressure on other partners, and makes the sale an exceptional procedure that is only resorted to when other solutions are impossible."
+              },
+              {
+                "type": "heading",
+                "text": "Third: The partners' right to avoid the sale"
+              },
+              {
+                "type": "paragraph",
+                "text": "The system granted the remaining partners an important right to avoid the sale, by compensating the party requesting the division for any decrease in the value of their share if it were sold separately."
+              },
+              {
+                "type": "paragraph",
+                "text": "And thus the system ensures:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Not to harm the party requesting the division,",
+                  "Not jeopardizing the interests of the other partners by preserving ownership of the property."
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Fourth: The practical effect of the regulatory text"
+              },
+              {
+                "type": "paragraph",
+                "text": "The application of this paragraph entails that:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "A request to sell the property is not automatically accepted, and the court is obligated to verify the possibility of compensating the party requesting the division.",
+                  "The property shall not be sold or referred for liquidation unless compensation is impossible if the value of the property individually is less than selling it in its entirety."
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "conclusion"
+              },
+              {
+                "type": "paragraph",
+                "text": "The second paragraph of Article (628) of the Civil Transactions Law is one of the most important texts regulating the division of jointly owned real estate, because it achieves justice and balance between the partners, and because it contains controls that prevent abuse of the right to request division or resorting to forced sale without justification."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "slug": "construction-contract-delay",
+        "title": "Delays in construction contracts",
+        "excerpt": "It's not just a time breach! It's a legal liability that requires compensation.. Construction contracts are among the most time-related contracts...",
+        "more": "Read more",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "It's not just a time violation! It's a legal liability that requires compensation..."
+          },
+          {
+            "type": "paragraph",
+            "text": "Construction contracts are among the most time-related contracts, as the contractor's obligation is not limited to completing the work, but extends to executing it within the agreed period. Therefore, the time factor in this type of contract is a fundamental obligation that is no less important than the quality of execution itself."
+          },
+          {
+            "type": "heading",
+            "text": "First: The concept of delay in construction contracts"
+          },
+          {
+            "type": "paragraph",
+            "text": "Delay in construction contracts means the contractor's failure to fulfill his obligation on the date specified in the contract, whether this date is explicit or inferred from the nature of the work, without a legitimate reason justifying this delay, such as force majeure or unforeseen circumstances beyond his control."
+          },
+          {
+            "type": "heading",
+            "text": "Second: The legal basis."
+          },
+          {
+            "type": "paragraph",
+            "text": "Article 171 of the Civil Transactions Law stipulates the following:"
+          },
+          {
+            "type": "paragraph",
+            "text": "If the debtor is late in fulfilling his obligation, he must compensate the creditor for any damages incurred due to the delay, unless he proves that the delay in fulfillment was due to a reason beyond his control."
+          },
+          {
+            "type": "paragraph",
+            "text": "Applying this text to the contracting agreement, the contractor is obligated to carry out the work within the specified time, and any delay in this matter entails his liability for the obligation."
+          },
+          {
+            "type": "heading",
+            "text": "Third: The elements of contractual liability for delay"
+          },
+          {
+            "type": "paragraph",
+            "text": "The contractor's liability for delay arises when the following conditions are met:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Failure to comply with the contract: This is represented by failure to comply with the agreed-upon period without a legal justification.",
+              "Damage: This refers to any actual loss or missed benefit incurred by the owner of the project.",
+              "Causal relationship: that is, the damage resulting from the contractor's delay is a direct consequence of that delay."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Proving liability does not require proving the contractor's bad faith; it is sufficient to breach the time commitment."
+          },
+          {
+            "type": "heading",
+            "text": "Fourth: Examples of damages resulting from delays in fulfilling obligations."
+          },
+          {
+            "type": "paragraph",
+            "text": "The damage caused by a contractor's delay takes many forms, the most prominent of which are:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "The property owner loses the opportunity to operate or invest as a result of the project not being ready on time.",
+              "Loss of expected rental income.",
+              "Incurring additional costs such as financing, security, or maintenance fees.",
+              "The owner's contractual obligations with third parties (such as tenants, partners, or financiers) are affected."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Fifth: The penalty clause."
+          },
+          {
+            "type": "paragraph",
+            "text": "Construction contracts often include a penalty clause that specifies the amount of compensation for delays, and in this case:"
+          },
+          {
+            "type": "paragraph",
+            "text": "The penalty clause is due as soon as the delay occurs without the need to prove damage, unless the contractor proves otherwise."
+          },
+          {
+            "type": "heading",
+            "text": "conclusion:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Delays in construction contracts are not merely a formal breach of time, but rather a contractual error that obligates the contractor to compensate the project owner for the damages incurred. Hence, the importance of accurately determining contractual periods and stipulating penalties for violating them is highlighted, in order to protect rights and achieve balance in construction contracts."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "slug": "legal-content-series",
+        "title": "Legal Content Series",
+        "excerpt": "It is suggested that the clips be short, not exceeding one minute, and that they address the most common questions among people...",
+        "more": "Read more",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "It is suggested that the clips be short, not exceeding one minute, and that they address the most common questions among people. Among the most suitable systems are the following:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Implementation System",
+              "Work system",
+              "Civil Transactions System",
+              "Mortgage system",
+              "The Sharia Law of Procedure"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Examples of questions raised in the enforcement system"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Can the bank sell the property directly?",
+              "When does a ruling become an execution?",
+              "What is the difference between an enforcement order and a judgment?",
+              "Does the suspension of services include salary?",
+              "Does the debtor have the right to object after the execution?"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Examples of questions raised in the labor system"
+          },
+          {
+            "type": "list",
+            "items": [
+              "When is dismissal arbitrary?",
+              "Are rights lost after resignation?",
+              "When are you entitled to an end-of-service bonus?",
+              "What is the difference between a fixed-term and an indefinite-term contract?"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Examples of questions raised in the civil transactions system"
+          },
+          {
+            "type": "list",
+            "items": [
+              "When is a contract void?",
+              "Is every penalty clause enforced?",
+              "When are you entitled to compensation for damages?",
+              "Is silence considered acceptance?",
+              "What is the difference between compensation and a penalty clause?"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Examples of questions raised in the mortgage system"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Does a mortgage prevent the sale of the property?",
+              "When does the mortgage expire?"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Examples of questions raised in the Sharia legal procedure system"
+          },
+          {
+            "type": "list",
+            "items": [
+              "When is a lawsuit rejected on procedural grounds?",
+              "Is there a penalty for malicious prosecution?",
+              "When is a lawsuit considered fictitious?"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "note:"
+          },
+          {
+            "type": "paragraph",
+            "text": "The work is incomplete and requires the preparation of a clear work plan, starting with the systems sequentially, while documenting all system information in a separate file."
+          }
+        ]
+      }
     ]
   }
 }

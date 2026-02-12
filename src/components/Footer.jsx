@@ -34,7 +34,7 @@ export default function Footer() {
                 <div className="w-50 h-50">
                     <Image src={logoFooter} alt="logoFooter" className="w-full h-full object-cover" />
                 </div>
-                <div className="flex justify-center md:justify-start gap-20 flex-wrap text-white">
+                <div className="flex justify-center md:justify-start gap-5 md:gap-20 text-center md:text-start flex-wrap text-white">
                     <div>
                         <ul>
                             <li className="my-3">{t("home")}</li>
@@ -45,14 +45,6 @@ export default function Footer() {
                     <div>
                         <ul>
                             <li className="my-3">{t("services")}</li>
-                            <li className="my-3">{t("work")}</li>
-                            <li className="my-3">{t("caedits")}</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li className="my-3">{t("team")}</li>
-                            <li className="my-3">{t("FAQ")}</li>
                             <li className="my-3">{t("contact")}</li>
                         </ul>
                     </div>

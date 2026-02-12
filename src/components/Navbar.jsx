@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -26,7 +27,7 @@ export default function Navbar() {
   const lineBottomRef = useRef(null);
   const tlRef = useRef(null);
 
-  const navRef = useRef(null); 
+  const navRef = useRef(null);
   const mobileNavRef = useRef(null);
 
   useGSAP(
@@ -170,9 +171,9 @@ export default function Navbar() {
             py-4 md:py-5
           "
         >
-          <div className="w-20 h-15">
+          <Link href="/" className="w-20 h-15">
             <Image src={LogoHeader} alt="" className="w-full h-full object-cover" />
-          </div>
+          </Link>
 
           {/* Desktop links */}
           <nav ref={navRef} className="hidden lg:flex items-center gap-10">
@@ -185,7 +186,7 @@ export default function Navbar() {
             <a className="transition-opacity hover:opacity-100 opacity-90" href="/Team">
               {t("Team")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="#">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/Blog">
               {t("Blog")}
             </a>
           </nav>
@@ -193,7 +194,7 @@ export default function Navbar() {
           <div className="flex gap-3 md:gap-5 items-center">
             <LocaleSwitch />
 
-            <button className="hidden md:inline-flex rounded-lg bg-[#f9bb00] px-6 py-2 font-bold text-black">
+            <button className="hidden md:inline-flex rounded-lg bg-[#f9bb00] px-6 py-2 font-bold text-black cursor-pointer">
               {t("btnHeader")}
             </button>
 
@@ -240,7 +241,7 @@ export default function Navbar() {
             <a data-menu-item href="/Team" onClick={closeMenu} className="py-2">
               {t("Team")}
             </a>
-            <a data-menu-item href="#" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/Blog" onClick={closeMenu} className="py-2">
               {t("Blog")}
             </a>
 
