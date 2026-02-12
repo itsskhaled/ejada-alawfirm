@@ -68,7 +68,7 @@ export default function QuestionsSection() {
         <section ref={containerRef} className="w-full relative py-16 md:py-35">
             <div className="mx-auto max-w-4xl px-4">
                 <div className="flex flex-col items-center gap-10 mb-10 md:mb-14">
-                    <div ref={titleSectionRef} className="flex gap-2 items-center font-bold px-4 py-2 bg-black text-white rounded-xl select-none whitespace-nowrap">
+                    <div ref={titleSectionRef} className="flex gap-2 items-center font-bold px-4 py-2 bg-[#404250] text-white rounded-xl select-none whitespace-nowrap">
                         <div ref={FlashingCircleRef} className="w-2 h-2 bg-[#f9bb00] rounded-full" />
                         <h1>{t("titleSection")}</h1>
                     </div>

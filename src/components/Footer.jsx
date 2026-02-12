@@ -29,7 +29,7 @@ export default function Footer() {
 
    
     return (
-        <section className="w-full relative py-20 bg-[#0c0c0c] rounded-t-2xl">
+        <section className="w-full relative py-20 bg-[#404250] rounded-t-2xl">
             <div className="flex flex-wrap w-full justify-between px-30 items-center">
                 <div className="w-50 h-50">
                     <Image src={logoFooter} alt="logoFooter" className="w-full h-full object-cover" />

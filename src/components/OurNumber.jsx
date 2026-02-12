@@ -113,7 +113,7 @@ export default function OurNumberSection() {
         className="object-cover"
       />
       <div className="flex flex-col w-full items-center gap-6 md:gap-10 relative z-10">
-        <div ref={titleSectionRef} className="flex gap-2 items-center text-center font-bold px-4 py-2 bg-black text-white rounded-xl select-none whitespace-nowrap overflow-hidden">
+        <div ref={titleSectionRef} className="flex gap-2 items-center text-center font-bold px-4 py-2 bg-[#404250] text-white rounded-xl select-none whitespace-nowrap overflow-hidden">
           <div ref={FlashingCircleRef} className="w-2 h-2 bg-[#f9bb00] rounded-full" />
           <h1>{t("titleSection")}</h1>
         </div>
@@ -140,7 +140,7 @@ export default function OurNumberSection() {
                 ref={el => cardsRef.current[i] = el}
                 key={i}
                 className="
-                  bg-black/95 rounded-2xl text-white
+                  bg-[#404250]  rounded-2xl text-white
                   flex flex-col justify-center items-center text-center gap-4
                   px-5 py-8
                   min-h-55 sm:min-h-60 md:min-h-65

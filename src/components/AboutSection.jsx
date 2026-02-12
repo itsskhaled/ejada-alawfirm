@@ -27,137 +27,137 @@ export default function AboutSection() {
     const textRef = useRef(null);
 
     useGSAP(() => {
-            gsap.fromTo(
-                FlashingCircleRef.current,
-                { scale: 1, opacity: 0.5 },
+        gsap.fromTo(
+            FlashingCircleRef.current,
+            { scale: 1, opacity: 0.5 },
+            {
+                scale: 1.5,
+                opacity: 1,
+                repeat: -1,
+                duration: 0.6,
+                ease: "sine.inOut",
+                yoyo: true,
+            }
+        );
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 70%",
+                toggleActions: "play none none none",
+            },
+        });
+
+        const titleSplit = new SplitText(titleRef.current, {
+            type: "words",
+            mask: "words",
+        });
+
+        const textSplit = new SplitText(textRef.current, {
+            type: "words",
+            mask: "words",
+        });
+
+        tl
+            .from(titleSectionRef.current, {
+                width: 0,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out",
+            })
+            .from(titleSplit.words, {
+                y: 40,
+                opacity: 0,
+                ease: "power2.out",
+                duration: 0.9,
+                stagger: 0.06,
+            })
+            .from(
+                textSplit.words,
                 {
-                    scale: 1.5,
-                    opacity: 1,
-                    repeat: -1,
-                    duration: 0.6,
-                    ease: "sine.inOut",
-                    yoyo: true,
-                }
-            );
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top 70%",
-                    toggleActions: "play none none none",
-                },
-            });
-
-            const titleSplit = new SplitText(titleRef.current, {
-                type: "words",
-                mask: "words",
-            });
-
-            const textSplit = new SplitText(textRef.current, {
-                type: "words",
-                mask: "words",
-            });
-
-            tl
-                .from(titleSectionRef.current, {
-                    width: 0,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power3.out",
-                })
-                .from(titleSplit.words, {
-                    y: 40,
+                    y: 30,
                     opacity: 0,
                     ease: "power2.out",
-                    duration: 0.9,
-                    stagger: 0.06,
-                })
-                .from(
-                    textSplit.words,
-                    {
-                        y: 30,
-                        opacity: 0,
-                        ease: "power2.out",
-                        duration: 0.6,
-                        stagger: 0.05,
+                    duration: 0.6,
+                    stagger: 0.05,
+                },
+                "<35%"
+            );
+
+        const mm = gsap.matchMedia();
+        mm.add({
+            isMobile: "(max-width: 640px)",
+            isDesktop: "(min-width: 641px)",
+        }, (context) => {
+            const { isDesktop, isMobile } = context.conditions;
+            const cards = gsap.utils.toArray(".about-card");
+            cards.forEach((card) => {
+                const countEl = card.querySelector(".about-count");
+                const titleEl = card.querySelector(".about-card-title");
+                const iconEl = card.querySelector(".about-icon");
+
+
+                const endValue = Number(card.getAttribute("data-count") || "0");
+
+                if (countEl) countEl.textContent = "0";
+
+                const cardTL = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: card,
+                        start: isDesktop ? "top 90%" : "top 40%",
+                        toggleActions: "play none none none",
+                        // markers: true
                     },
-                    "<35%"
-                );
-
-            const mm = gsap.matchMedia();
-            mm.add({
-                isMobile: "(max-width: 640px)",
-                isDesktop: "(min-width: 641px)",
-            }, (context) => {
-                const { isDesktop, isMobile } = context.conditions;
-                const cards = gsap.utils.toArray(".about-card");
-                cards.forEach((card) => {
-                    const countEl = card.querySelector(".about-count");
-                    const titleEl = card.querySelector(".about-card-title");
-                    const iconEl = card.querySelector(".about-icon");
-
-
-                    const endValue = Number(card.getAttribute("data-count") || "0");
-
-                    if (countEl) countEl.textContent = "0";
-
-                    const cardTL = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: card,
-                            start: isDesktop ? "top 90%" : "top 40%",
-                            toggleActions: "play none none none",
-                            // markers: true
-                        },
-                    });
-
-                    cardTL
-                        .from(card, {
-                            y: 24,
-                            opacity: 0,
-                            duration: 0.5,
-                            ease: "power2.out",
-                        })
-                        .from(
-                            iconEl,
-                            {
-                                scale: 0.8,
-                                opacity: 0,
-                                duration: 0.35,
-                                ease: "back.out(1.6)",
-                            },
-                            "<10%"
-                        )
-                        .from(
-                            titleEl,
-                            {
-                                y: 10,
-                                opacity: 0,
-                                duration: 0.35,
-                                ease: "power2.out",
-                            },
-                            "<10%"
-                        )
-                        // ✅ Count up 0 -> endValue
-                        .to(
-                            countEl,
-                            {
-                                duration: 1,
-                                ease: "power1.out",
-                                snap: { textContent: 1 },
-                                textContent: endValue,
-                            },
-                            "<20%"
-                        );
                 });
-            })
+
+                cardTL
+                    .from(card, {
+                        y: 24,
+                        opacity: 0,
+                        duration: 0.5,
+                        ease: "power2.out",
+                    })
+                    .from(
+                        iconEl,
+                        {
+                            scale: 0.8,
+                            opacity: 0,
+                            duration: 0.35,
+                            ease: "back.out(1.6)",
+                        },
+                        "<10%"
+                    )
+                    .from(
+                        titleEl,
+                        {
+                            y: 10,
+                            opacity: 0,
+                            duration: 0.35,
+                            ease: "power2.out",
+                        },
+                        "<10%"
+                    )
+                    // ✅ Count up 0 -> endValue
+                    .to(
+                        countEl,
+                        {
+                            duration: 1,
+                            ease: "power1.out",
+                            snap: { textContent: 1 },
+                            textContent: endValue,
+                        },
+                        "<20%"
+                    );
+            });
+        })
 
 
-            // ✅ Cleanup SplitText (important)
-            return () => {
-                titleSplit.revert();
-                textSplit.revert();
-            };
-        },
+        // ✅ Cleanup SplitText (important)
+        return () => {
+            titleSplit.revert();
+            textSplit.revert();
+        };
+    },
         { scope: containerRef }
     );
 
@@ -165,9 +165,9 @@ export default function AboutSection() {
         <section
             ref={containerRef}
             id="about-section"
-            className="w-full bg-[#0c0c0c] relative py-40"
+            className="w-full bg-[#404250] relative py-40"
         >
-            
+
             <div className="flex flex-col w-full items-center gap-10">
                 <div
                     ref={titleSectionRef}

@@ -128,7 +128,7 @@ export default function TeamSection() {
     }, []);
 
     return (
-        <section ref={containerRef} id="team-section" className="w-full bg-[#0c0c0c] relative py-35">
+        <section ref={containerRef} id="team-section" className="w-full bg-[#404250] relative py-35">
             <div className="mx-auto max-w-7xl px-4">
                 <div className="flex flex-col w-full items-center gap-5">
                     <div

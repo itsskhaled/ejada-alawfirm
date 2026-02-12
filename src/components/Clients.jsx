@@ -47,7 +47,7 @@ export default function ClientsSection() {
         <section className="w-full relative bg-neutral-100 py-35">
             <div className="flex flex-col w-full items-center gap-5">
                 <div
-                    className="flex gap-2 items-center text-center text-2xl font-bold px-6 py-4 bg-black text-white rounded-xl select-none whitespace-nowrap overflow-hidden my-5"
+                    className="flex gap-3 items-center text-center text-2xl font-bold px-6 py-4 bg-[#404250] text-white rounded-xl select-none whitespace-nowrap overflow-hidden my-5"
                 >
                     <div
                         ref={FlashingCircleRef}

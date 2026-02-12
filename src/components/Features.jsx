@@ -123,7 +123,7 @@ export default function FeaturesSection() {
             <div>
                 <div className="flex flex-wrap justify-center lg:justify-between gap-10">
                     <div className="w-full max-w-xl flex flex-col gap-5">
-                        <div ref={titleSectionRef} className="inline-flex items-center gap-2 text-white bg-black rounded-xl select-none px-4 py-2 self-start whitespace-nowrap overflow-hidden">
+                        <div ref={titleSectionRef} className="inline-flex items-center gap-2 text-white bg-[#404250] rounded-xl select-none px-4 py-2 self-start whitespace-nowrap overflow-hidden">
                             <div ref={FlashingCircleRef} className="w-2 h-2 bg-[#f9bb00] rounded-full" />
                             <h1 className="font-bold">{t("titleSection")}</h1>
                         </div>
@@ -136,7 +136,7 @@ export default function FeaturesSection() {
                         {items.map((item, i) => {
                             const Icon = ICONS[item.icon];
                             return (
-                                <div ref={el => cardsRef.current[i] = el} key={i} className="my-5 w-70 md:w-150 h-40 md:h-35 bg-black rounded-xl py-6 px-6 select-none">
+                                <div ref={el => cardsRef.current[i] = el} key={i} className="my-5 w-70 md:w-150 h-40 md:h-35 bg-[#404250] rounded-xl py-6 px-6 select-none">
                                     <div className="flex gap-2 md:gap-5 items-center">
                                         {Icon && <Icon className="px-2 py-2 w-10 md:w-12 h-10 md:h-12 text-[#f9bb00]" />}
                                         <h1 className="text-white text-xl md:text-2xl font-bold capitalize">{item.title}</h1>

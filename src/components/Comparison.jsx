@@ -93,7 +93,7 @@ export default function ComparisonSection() {
             <div className="flex flex-col w-full items-center gap-10">
                 <div
                     ref={titleSectionRef}
-                    className="flex gap-2 items-center text-center font-bold px-4 py-2 bg-black text-white rounded-xl select-none whitespace-nowrap overflow-hidden"
+                    className="flex gap-2 items-center text-center font-bold px-4 py-2 bg-[#404250] text-white rounded-xl select-none whitespace-nowrap overflow-hidden"
                 >
                     <div
                         ref={FlashingCircleRef}

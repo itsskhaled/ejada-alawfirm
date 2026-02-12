@@ -131,7 +131,7 @@ export default function ContactSection() {
             <div>
                 <div className="flex flex-col md:flex-row justify-center lg:justify-between gap-10">
                     <div className="w-full max-w-xl flex flex-col gap-5">
-                        <div ref={titleSectionRef} className="inline-flex items-center gap-2 text-white bg-black rounded-xl select-none px-4 py-2 self-start whitespace-nowrap overflow-hidden">
+                        <div ref={titleSectionRef} className="inline-flex items-center gap-2 text-white bg-[#404250] rounded-xl select-none px-4 py-2 self-start whitespace-nowrap overflow-hidden">
                             <div ref={FlashingCircleRef} className="w-2 h-2 bg-[#f9bb00] rounded-full" />
                             <h1 className="font-bold">{t("titleSection")}</h1>
                         </div>
