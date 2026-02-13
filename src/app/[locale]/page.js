@@ -11,10 +11,12 @@ import QuestionsSection from "@/components/Questions";
 import ContactSection from "@/components/Contact";
 import CTASection from "@/components/CTA";
 import Footer from "@/components/Footer";
+import ScrollToStoredTarget from "@/components/ScrollToStoredTarget";
 
 export default function Page() {
   return (
     <>
+      <ScrollToStoredTarget />
       <Navbar />
       <div className="relative w-full overflow-hidden">
         <div className="absolute top-45">
@@ -45,7 +47,6 @@ export default function Page() {
       <TeamSection />
       <QuestionsSection />
       <ContactSection />
-      {/* <CTASection /> */}
       <Footer />
     </>
   );

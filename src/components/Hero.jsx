@@ -8,8 +8,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
+import Link from "next/link";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(useGSAP, SplitText);
+gsap.registerPlugin(useGSAP, SplitText, ScrollToPlugin);
 export default function HeroSection() {
     const t = useTranslations("HeroSection");
 
@@ -19,8 +21,6 @@ export default function HeroSection() {
 
 
     useGSAP(() => {
-
-        
         const headTextSplit = new SplitText(headTextRef.current, {
             type: "words",
             mask: "words"
@@ -29,8 +29,6 @@ export default function HeroSection() {
             type: "words",
             mask: "words"
         });
-
-        // console.log("lines:", SubheadTextSplit.words.length);
 
         const SupportingTextSplit = new SplitText(SupportingTextRef.current, {
             type: "lines",
@@ -92,11 +90,19 @@ export default function HeroSection() {
                 <h1 ref={SubheadTextRef} className="text-3xl md:text-5xl font-bold text-center md:w-3xl lg:w-6xl px-6 leading-relaxed">{t("SubheadText")}</h1>
                 <p ref={SupportingTextRef} className="text-2xl text-center px-6 md:w-5xl">{t("SupportingText")}</p>
                 <div className="flex gap-3 md:gap-8">
-                    <button className="btnsRef border px-4 py-2 rounded-xl cursor-pointer font-bold overflow-hidden">
+                    <Link href="https://wa.me/966920008433" target="_blank" className="btnsRef border px-4 py-2 rounded-xl cursor-pointer font-bold overflow-hidden">
                         <span className="btnText whitespace-nowrap">{t("ButtonLeft")}</span>
-                    </button>
+                    </Link>
 
-                    <button className="btnsRef bg-[#f9bb00] px-4 py-2 rounded-xl cursor-pointer font-bold overflow-hidden">
+                    <button onClick={() => {
+                        gsap.to(window, {
+                            duration: 1,
+                            scrollTo: {
+                                y: "#contact"
+                            },
+                            ease: "power2.out"
+                        })
+                    }} className="btnsRef bg-[#f9bb00] px-4 py-2 rounded-xl cursor-pointer font-bold overflow-hidden">
                         <span className="btnText whitespace-nowrap">{t("ButtonRight")}</span>
                     </button>
                 </div>

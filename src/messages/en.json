@@ -67,7 +67,7 @@
       {
         "id": 5,
         "title": "Effective communication and ongoing support",
-        "text": "Clear communication channels, quick response, and a constant commitment to customer service at all stages",
+        "text": "Clear communication, quick response, and ongoing client support at every stage",
         "icon": "head-set"
       }
     ]
@@ -320,19 +320,41 @@
     "typeOfService": "Type of Service",
     "submit": "Send",
     "placeholder": "Write down the details of the case...",
+    "alerts": {
+      "success": "Success",
+      "errorTitle": "Attention",
+      "attention": "Attention",
+      "fixErrors": "Please fill the required fields correctly.",
+      "sentOk": "Your message was sent successfully ✅",
+      "sendFail": "Something went wrong. Please try again.",
+      "sending": "Sending..."
+    },
+    "validation": {
+      "required": "Required",
+      "invalidEmail": "Invalid email",
+      "invalidPhone": "Invalid phone number"
+    },
     "itemsContact": [
-      { "id": 1, "title": "Contact us", "info": "920008433", "icon": "phone" },
+      {
+        "id": 1,
+        "title": "Contact us",
+        "info": "920008433",
+        "icon": "phone",
+        "href": "https://wa.me/966920008433"
+      },
       {
         "id": 2,
         "title": "e-mail",
         "info": "info@ejadalawfirm.sa",
-        "icon": "mail"
+        "icon": "mail",
+        "href": "mailto:info@ejadalawfirm.sa"
       },
       {
         "id": 3,
         "title": "the site",
         "info": "Riyadh - Al Narjis District - Rabah Al Lakhmi Street",
-        "icon": "map-pin"
+        "icon": "map-pin",
+        "href": "https://maps.app.goo.gl/PrKiJzZxDz2ErYsu9?g_st=ic"
       }
     ],
     "services": [
@@ -366,23 +388,42 @@
     "contact": "Contact us",
     "infoFooter": "We put our legal expertise at the service of our clients, and work to provide integrated legal advice and solutions that help them make the right decisions with confidence and clarity",
     "itemsFooter": [
-      { "id": 1, "info": "920008433", "icon": "phone" },
+      {
+        "id": 1,
+        "info": "920008433",
+        "icon": "phone",
+        "href": "https://wa.me/966920008433"
+      },
       {
         "id": 2,
         "info": "info@ejadalawfirm.sa",
-        "icon": "mail"
+        "icon": "mail",
+        "href": "mailto:info@ejadalawfirm.sa"
       },
       {
         "id": 3,
         "info": "Riyadh - Al Narjis District - Rabah Al Lakhmi Street",
-        "icon": "map-pin"
+        "icon": "map-pin",
+        "href": "https://maps.app.goo.gl/PrKiJzZxDz2ErYsu9?g_st=ic"
       }
     ],
     "itemsSocialMedia": [
-      { "id": 1, "icon": "instagram" },
-      { "id": 2, "icon": "twitter" },
-      { "id": 3, "icon": "linkedin" },
-      { "id": 4, "icon": "map" }
+      {
+        "id": 1,
+        "icon": "instagram",
+        "href": "https://www.instagram.com/ejadalawfirm?igsh=MWRreHM0ZDlyd3l0cA=="
+      },
+      { "id": 2, "icon": "twitter", "href": "https://x.com/ejadalawfirm?s=21" },
+      {
+        "id": 3,
+        "icon": "linkedin",
+        "href": "https://www.linkedin.com/company/ejadalawfirm/"
+      },
+      {
+        "id": 4,
+        "icon": "map",
+        "href": "https://maps.app.goo.gl/PrKiJzZxDz2ErYsu9?g_st=ic"
+      }
     ]
   },
   "HeroAboutSection": {

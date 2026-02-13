@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { useRef } from "react";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 export default function Footer() {
@@ -27,25 +27,25 @@ export default function Footer() {
         "map": Map
     };
 
-   
+
     return (
         <section className="w-full relative py-20 bg-[#404250] rounded-t-2xl">
-            <div className="flex flex-wrap w-full justify-between px-30 items-center">
+            <div className="flex flex-wrap justify-center w-full md:justify-between px-30 items-center">
                 <div className="w-50 h-50">
                     <Image src={logoFooter} alt="logoFooter" className="w-full h-full object-cover" />
                 </div>
-                <div className="flex justify-center md:justify-start gap-5 md:gap-20 text-center md:text-start flex-wrap text-white">
+                <div className="flex flex-col md:flex-row justify-center md:justify-start gap-5 md:gap-20 text-center md:text-start text-white">
                     <div>
                         <ul>
-                            <li className="my-3">{t("home")}</li>
-                            <li className="my-3">{t("aboutus")}</li>
-                            <li className="my-3">{t("features")}</li>
+                            <Link href="/"><li className="my-3">{t("home")}</li></Link>
+                            <Link href="/about-us"><li className="my-3">{t("aboutus")}</li></Link>
+                            <Link href="/team"><li className="my-3">{t("features")}</li></Link>
                         </ul>
                     </div>
                     <div>
                         <ul>
-                            <li className="my-3">{t("services")}</li>
-                            <li className="my-3">{t("contact")}</li>
+                            <Link href="/blog"><li className="my-3">{t("services")}</li></Link>
+                            <Link href="https://wa.me/966920008433" target="_blank"><li className="my-3">{t("contact")}</li></Link>
                         </ul>
                     </div>
                 </div>
@@ -60,12 +60,12 @@ export default function Footer() {
                     {items.map((item, i) => {
                         const Icon = ICONS[item.icon];
                         return (
-                            <div key={i} className="flex gap-2 items-center">
+                            <Link href={item.href} target="_blank" key={i} className="flex gap-2 items-center">
                                 {Icon && <Icon className="px-2 py-2 w-10 md:w-10 h-10 md:h-10 text-white" />}
                                 <div className="text-white">
                                     <p className="text-xs md:text-base ">{item.info}</p>
                                 </div>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>
@@ -73,9 +73,9 @@ export default function Footer() {
                     {SocialMedia.map((item, i) => {
                         const Icon = IconSocialMedia[item.icon];
                         return (
-                            <div key={i} className="flex gap-2">
+                            <Link href={item.href} target="_blank" key={i} className="flex gap-2">
                                 {Icon && <Icon className="px-2 py-2 w-10 md:w-10 h-10 md:h-10 text-white" />}
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>

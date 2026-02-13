@@ -99,7 +99,7 @@ export default function CreditsSection() {
                     <h1>{t("titleSection")}</h1>
                 </div>
                 <h1 ref={titleRef} className="text-5xl md:text-7xl font-bold text-[#f9bb00] text-center leading-relaxed">{t("title")}</h1>
-                <p ref={textRef} className="text-xl md:text-2xl">{t("text")}</p>
+                <p ref={textRef} className="text-xl md:text-2xl text-center">{t("text")}</p>
             </div>
 
             <div className="w-full flex flex-wrap gap-5 justify-center my-20">

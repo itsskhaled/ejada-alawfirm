@@ -78,15 +78,15 @@ export default function HowWeWorkSection() {
                     y: 50,
                     opacity: 0,
                     ease: "power2.out",
-                    duration: 0.9,
-                    stagger: 0.06,
+                    duration: 0.5,
+                    stagger: 0.05,
                 }, "<30%")
                 .from(subTitleSplit.words, {
                     y: 50,
                     opacity: 0,
                     ease: "power2.out",
-                    duration: 0.9,
-                    stagger: 0.06,
+                    duration: 0.5,
+                    stagger: 0.05,
                 }, "<50%")
             if (isDesktop) {
                 tl.from(cardsRef.current, {

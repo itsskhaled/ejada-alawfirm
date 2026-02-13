@@ -82,8 +82,8 @@ export default function ComparisonSection() {
                 .from([ourCompanyRef.current, otherCompanyRef.current], {
                     y: 50,
                     opacity: 0,
-                    duration: 0.8,
-                    stagger: { each: .07 },
+                    duration: 0.6,
+                    stagger: { each: .04 },
                     ease: "power2.out"
                 }, "<50%")
         })

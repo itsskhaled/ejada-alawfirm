@@ -180,23 +180,24 @@ export default function Navbar() {
             <a className="transition-opacity hover:opacity-100 opacity-90" href="/">
               {t("Home")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="/About-us">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/about-us">
               {t("About")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="/Team">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/team">
               {t("Team")}
             </a>
-            <a className="transition-opacity hover:opacity-100 opacity-90" href="/Blog">
+            <a className="transition-opacity hover:opacity-100 opacity-90" href="/blog">
               {t("Blog")}
             </a>
           </nav>
 
           <div className="flex gap-3 md:gap-5 items-center">
             <LocaleSwitch />
-
-            <button className="hidden md:inline-flex rounded-lg bg-[#f9bb00] px-6 py-2 font-bold text-black cursor-pointer">
-              {t("btnHeader")}
-            </button>
+            <Link href="https://wa.me/966920008433" target="_blank">
+              <button className="hidden md:inline-flex rounded-lg bg-[#f9bb00] px-6 py-2 font-bold text-black cursor-pointer">
+                {t("btnHeader")}
+              </button>
+            </Link>
 
             <button
               aria-label="Toggle menu"
@@ -235,23 +236,23 @@ export default function Navbar() {
             <a data-menu-item href="/" onClick={closeMenu} className="py-2">
               {t("Home")}
             </a>
-            <a data-menu-item href="/About-us" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/about-us" onClick={closeMenu} className="py-2">
               {t("About")}
             </a>
-            <a data-menu-item href="/Team" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/team" onClick={closeMenu} className="py-2">
               {t("Team")}
             </a>
-            <a data-menu-item href="/Blog" onClick={closeMenu} className="py-2">
+            <a data-menu-item href="/blog" onClick={closeMenu} className="py-2">
               {t("Blog")}
             </a>
-
-            <button
+            <Link href="https://wa.me/966920008433" target="_blank"
               data-menu-item
               onClick={closeMenu}
-              className="mt-2 rounded-xl bg-[#f9bb00] px-6 py-3 font-bold text-black"
+              className="mt-2 rounded-xl bg-[#f9bb00] px-6 py-3 font-bold text-black text-center"
             >
               {t("btnHeader")}
-            </button>
+            </Link>
+
           </div>
         </div>
       </div>

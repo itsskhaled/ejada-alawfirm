@@ -69,9 +69,9 @@ export default function AboutSection() {
                 y: 40,
                 opacity: 0,
                 ease: "power2.out",
-                duration: 0.9,
-                stagger: 0.06,
-            })
+                duration: 0.5,
+                stagger: 0.04,
+            }, "<20%")
             .from(
                 textSplit.words,
                 {

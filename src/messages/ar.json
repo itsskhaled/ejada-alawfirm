@@ -311,19 +311,41 @@
     "typeOfService": "حدد نوع الخدمة",
     "submit": "إرســــــــــــــال",
     "placeholder": "اكتب تفاصيل القضية...",
+    "alerts": {
+      "success": "نجاح",
+      "errorTitle": "تنبيه",
+      "attention":"تنبيه",
+      "fixErrors": "تأكد من تعبئة الحقول المطلوبة بشكل صحيح.",
+      "sentOk": "تم إرسال بياناتك بنجاح ✅",
+      "sendFail": "صار خطأ أثناء الإرسال. جرّب مرة ثانية.",
+      "sending": "جاري الإرسال..."
+    },
+    "validation": {
+      "required": "مطلوب",
+      "invalidEmail": "البريد الإلكتروني غير صحيح",
+      "invalidPhone": "رقم الهاتف غير صحيح"
+    },
     "itemsContact": [
-      { "id": 1, "title": "إتصل بنا", "info": "920008433", "icon": "phone" },
+      {
+        "id": 1,
+        "title": "إتصل بنا",
+        "info": "920008433",
+        "icon": "phone",
+        "href": "https://wa.me/966920008433"
+      },
       {
         "id": 2,
         "title": "البريد الإلكتروني",
         "info": "info@ejadalawfirm.sa",
-        "icon": "mail"
+        "icon": "mail",
+        "href": "mailto:info@ejadalawfirm.sa"
       },
       {
         "id": 3,
         "title": "الموقع",
         "info": "الرياض - حي النرجس - شارع رباح اللخمي",
-        "icon": "map-pin"
+        "icon": "map-pin",
+        "href": "https://maps.app.goo.gl/PrKiJzZxDz2ErYsu9?g_st=ic"
       }
     ],
     "services": [
@@ -354,25 +376,45 @@
     "contact": "تواصل معنا",
     "infoFooter": "نضع خبرتنا القانونية في خدمة عملائنا، ونعمل على تقديم استشارات وحلول قانونية متكاملة تساعدهم على اتخاذ القرارات الصحيحة بثقة ووضوح",
     "itemsFooter": [
-      { "id": 1, "title": "إتصل بنا", "info": "920008433", "icon": "phone" },
+      {
+        "id": 1,
+        "title": "إتصل بنا",
+        "info": "920008433",
+        "icon": "phone",
+        "href": "https://wa.me/966920008433"
+      },
       {
         "id": 2,
         "title": "البريد الإلكتروني",
         "info": "info@ejadalawfirm.sa",
-        "icon": "mail"
+        "icon": "mail",
+        "href": "mailto:info@ejadalawfirm.sa"
       },
       {
         "id": 3,
         "title": "الموقع",
         "info": "الرياض - حي النرجس - شارع رباح اللخمي",
-        "icon": "map-pin"
+        "icon": "map-pin",
+        "href": "https://maps.app.goo.gl/PrKiJzZxDz2ErYsu9?g_st=ic"
       }
     ],
     "itemsSocialMedia": [
-      { "id": 1, "icon": "instagram" },
-      { "id": 2, "icon": "twitter" },
-      { "id": 3, "icon": "linkedin" },
-      { "id": 4, "icon": "map" }
+      {
+        "id": 1,
+        "icon": "instagram",
+        "href": "https://www.instagram.com/ejadalawfirm?igsh=MWRreHM0ZDlyd3l0cA=="
+      },
+      { "id": 2, "icon": "twitter", "href": "https://x.com/ejadalawfirm?s=21" },
+      {
+        "id": 3,
+        "icon": "linkedin",
+        "href": "https://www.linkedin.com/company/ejadalawfirm/"
+      },
+      {
+        "id": 4,
+        "icon": "map",
+        "href": "https://maps.app.goo.gl/PrKiJzZxDz2ErYsu9?g_st=ic"
+      }
     ]
   },
   "HeroAboutSection": {
