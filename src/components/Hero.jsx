@@ -86,7 +86,7 @@ export default function HeroSection() {
     return (
         <section className="w-full relative py-40">
             <div className="w-full flex flex-col items-center justify-center gap-10">
-                <h1 ref={headTextRef} className="py-2 bg-white/10 backdrop-blur-xl border border-white/20 font-bold capitalize">{t("HeadText")}</h1>
+                <h3 ref={headTextRef} className="py-2 bg-white/10 backdrop-blur-xl border border-white/20 font-bold capitalize">{t("HeadText")}</h3>
                 <h1 ref={SubheadTextRef} className="text-3xl md:text-5xl font-bold text-center md:w-3xl lg:w-6xl px-6 leading-relaxed">{t("SubheadText")}</h1>
                 <p ref={SupportingTextRef} className="text-2xl text-center px-6 md:w-5xl">{t("SupportingText")}</p>
                 <div className="flex gap-3 md:gap-8">
