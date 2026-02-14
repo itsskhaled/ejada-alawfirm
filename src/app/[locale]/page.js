@@ -21,7 +21,7 @@ const BRAND = {
 };
 
 export async function generateMetadata({ params }) {
-  const locale = params.locale || "ar";
+  const { locale } = (await params) || "ar";
 
   const META = {
     ar: {
@@ -125,7 +125,7 @@ export default function Page({ params }) {
   };
   return (
     <>
-     <JsonLd data={structuredData} />
+      <JsonLd data={structuredData} />
       <ScrollToStoredTarget />
       <Navbar />
       <div className="relative w-full overflow-hidden">

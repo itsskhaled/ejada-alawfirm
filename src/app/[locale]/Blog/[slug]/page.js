@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 
 import ar from "@/messages/ar.json";
 import en from "@/messages/en.json";
+import Footer from "@/components/Footer";
 
 const MESSAGES = { ar, en };
 
@@ -25,7 +26,7 @@ export function generateStaticParams() {
 }
 
 // ===== SEO ADDITIONS ONLY =====
-const DOMAIN = "https://your-domain.com"; 
+const DOMAIN = "https://your-domain.com";
 const BRAND = {
   ar: "إجادة للمحاماة والاستشارات القانونية",
   en: "Ejada Law Firm",
@@ -111,122 +112,125 @@ export default async function BlogDetails({ params }) {
   if (!blog) return notFound();
 
   return (
-    <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-35">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: blog.title,
-            description: blog.excerpt
-              ? String(blog.excerpt).trim()
-              : Array.isArray(blog.content)
-                ? blog.content.find((b) => b?.type === "paragraph" && b?.text)
-                    ?.text || ""
-                : blog.text || "",
-            inLanguage: locale,
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": `${DOMAIN}/${locale}/blog/${slug}`,
-            },
-            image:
-              blog.ogImage || blog.cover || `${DOMAIN}/og/blog-${locale}.jpg`,
-            publisher: {
-              "@type": "Organization",
-              name: BRAND.en,
-              alternateName: BRAND.ar,
-              url: DOMAIN,
-              logo: {
-                "@type": "ImageObject",
-                url: `${DOMAIN}/logo.png`,
+    <>
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-35">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: blog.title,
+              description: blog.excerpt
+                ? String(blog.excerpt).trim()
+                : Array.isArray(blog.content)
+                  ? blog.content.find((b) => b?.type === "paragraph" && b?.text)
+                      ?.text || ""
+                  : blog.text || "",
+              inLanguage: locale,
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${DOMAIN}/${locale}/blog/${slug}`,
               },
-            },
-            ...(blog.author
-              ? { author: { "@type": "Person", name: blog.author } }
-              : {}),
-            ...(blog.datePublished
-              ? { datePublished: blog.datePublished }
-              : {}),
-            ...(blog.dateModified
-              ? { dateModified: blog.dateModified }
-              : blog.datePublished
-                ? { dateModified: blog.datePublished }
+              image:
+                blog.ogImage || blog.cover || `${DOMAIN}/og/blog-${locale}.jpg`,
+              publisher: {
+                "@type": "Organization",
+                name: BRAND.en,
+                alternateName: BRAND.ar,
+                url: DOMAIN,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${DOMAIN}/logo.png`,
+                },
+              },
+              ...(blog.author
+                ? { author: { "@type": "Person", name: blog.author } }
                 : {}),
-          }),
-        }}
-      />
+              ...(blog.datePublished
+                ? { datePublished: blog.datePublished }
+                : {}),
+              ...(blog.dateModified
+                ? { dateModified: blog.dateModified }
+                : blog.datePublished
+                  ? { dateModified: blog.datePublished }
+                  : {}),
+            }),
+          }}
+        />
 
-      <Navbar />
+        <Navbar />
 
-      <h1 className="text-3xl font-bold py-10">{blog.title}</h1>
+        <h1 className="text-3xl font-bold py-10">{blog.title}</h1>
 
-      <div className="mt-8 space-y-5 leading-relaxed text-neutral-800">
-        {Array.isArray(blog.content) ? (
-          blog.content.map((block, i) => {
-            if (block.type === "paragraph") {
-              return <p key={i}>{block.text}</p>;
-            }
+        <div className="mt-8 space-y-5 leading-relaxed text-neutral-800">
+          {Array.isArray(blog.content) ? (
+            blog.content.map((block, i) => {
+              if (block.type === "paragraph") {
+                return <p key={i}>{block.text}</p>;
+              }
 
-            if (block.type === "heading") {
-              return (
-                <h2 key={i} className="text-xl font-bold mt-10">
-                  {block.text}
-                </h2>
-              );
-            }
+              if (block.type === "heading") {
+                return (
+                  <h2 key={i} className="text-xl font-bold mt-10">
+                    {block.text}
+                  </h2>
+                );
+              }
 
-            if (block.type === "list") {
-              return (
-                <ul key={i} className="list-disc pr-6 space-y-2">
-                  {block.items?.map((li, idx) => (
-                    <li key={idx}>{li}</li>
-                  ))}
-                </ul>
-              );
-            }
+              if (block.type === "list") {
+                return (
+                  <ul key={i} className="list-disc pr-6 space-y-2">
+                    {block.items?.map((li, idx) => (
+                      <li key={idx}>{li}</li>
+                    ))}
+                  </ul>
+                );
+              }
 
-            if (block.type === "qa") {
-              return (
-                <div key={i} className="mt-10">
-                  <div className="bg-neutral-200 px-4 py-2 font-bold rounded-md">
-                    {block.question}
+              if (block.type === "qa") {
+                return (
+                  <div key={i} className="mt-10">
+                    <div className="bg-neutral-200 px-4 py-2 font-bold rounded-md">
+                      {block.question}
+                    </div>
+
+                    <div className="mt-6 space-y-4">
+                      {block.answer?.map((item, idx) => {
+                        if (item.type === "paragraph")
+                          return <p key={idx}>{item.text}</p>;
+
+                        if (item.type === "heading")
+                          return (
+                            <h3 key={idx} className="font-bold text-lg mt-6">
+                              {item.text}
+                            </h3>
+                          );
+
+                        if (item.type === "list")
+                          return (
+                            <ul key={idx} className="list-disc pr-6 space-y-2">
+                              {item.items?.map((x, j) => (
+                                <li key={j}>{x}</li>
+                              ))}
+                            </ul>
+                          );
+
+                        return null;
+                      })}
+                    </div>
                   </div>
+                );
+              }
 
-                  <div className="mt-6 space-y-4">
-                    {block.answer?.map((item, idx) => {
-                      if (item.type === "paragraph")
-                        return <p key={idx}>{item.text}</p>;
-
-                      if (item.type === "heading")
-                        return (
-                          <h3 key={idx} className="font-bold text-lg mt-6">
-                            {item.text}
-                          </h3>
-                        );
-
-                      if (item.type === "list")
-                        return (
-                          <ul key={idx} className="list-disc pr-6 space-y-2">
-                            {item.items?.map((x, j) => (
-                              <li key={j}>{x}</li>
-                            ))}
-                          </ul>
-                        );
-
-                      return null;
-                    })}
-                  </div>
-                </div>
-              );
-            }
-
-            return null;
-          })
-        ) : (
-          <p>{blog.content ?? blog.text}</p>
-        )}
-      </div>
-    </section>
+              return null;
+            })
+          ) : (
+            <p>{blog.content ?? blog.text}</p>
+          )}
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 }

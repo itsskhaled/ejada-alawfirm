@@ -10,7 +10,7 @@ const BRAND = {
 };
 
 export async function generateMetadata({ params }) {
-  const locale = params.locale || "ar";
+  const { locale } = (await params) || "ar";
 
   const meta = {
     ar: {
