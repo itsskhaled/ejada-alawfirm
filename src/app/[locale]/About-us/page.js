@@ -4,6 +4,7 @@ import CTASection from "@/components/CTA";
 import Footer from "@/components/Footer";
 import HeroAboutSection from "@/components/HeroAbout";
 import Navbar from "@/components/Navbar";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
 const DOMAIN = "https://your-domain.com"; // غيّره
 const BRAND = {
   ar: "إجادة للمحاماة والاستشارات القانونية",
@@ -63,6 +64,7 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
+      <WhatsAppBtn />
       <HeroAboutSection />
       <ClientsSection />
       <CTASection />

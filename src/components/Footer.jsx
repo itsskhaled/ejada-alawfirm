@@ -81,8 +81,9 @@ export default function Footer() {
                 </div>
             </div>
             <hr className="text-white opacity-10 mt-15" />
-            <div className="absolute bottom-5 w-full justify-center flex">
-                <p className="text-white text-xs md:text-2xs">Copyright © {new Date().getFullYear()} Ejadalawfirm. All Rights Reserved</p>
+            <div className="absolute bottom-5 w-full flex flex-col-reverse md:flex-row justify-between px-20 text-center">
+                <p className="text-white text-xs md:text-2xs text-center">{t("TermsAndConditions")}</p>
+                <p className="text-white text-xs md:text-2xs text-nowrap text-center">Copyright © {new Date().getFullYear()} Ejadalawfirm. All Rights Reserved</p>
             </div>
         </section>
     );

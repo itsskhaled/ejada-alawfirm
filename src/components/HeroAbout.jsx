@@ -113,20 +113,20 @@ export default function HeroAboutSection() {
 
                 <div
                     ref={titleRef}
-                    className="text-center text-4xl md:text-5xl font-bold leading-relaxed capitalize"
+                    className="text-center text-5xl md:text-5xl font-bold leading-relaxed capitalize"
                 >
                     <h1>{t("title")}</h1>
                 </div>
 
                 <div
                     ref={textRef}
-                    className="text-center text-2xl px-4 md:text-3xl md:w-2xl lg:w-6xl leading-relaxed capitalize"
+                    className="text-center text-base px-4 md:text-3xl md:w-2xl lg:w-6xl leading-relaxed capitalize"
                 >
                     <p>{t("text")}</p>
                 </div>
                 <div
                     ref={subTextRef}
-                    className="text-center text-2xl px-4 md:text-3xl md:w-2xl lg:w-6xl leading-relaxed capitalize"
+                    className="text-center text-base px-4 md:text-3xl md:w-2xl lg:w-6xl leading-relaxed capitalize"
                 >
                     <p>{t("subText")}</p>
                 </div>

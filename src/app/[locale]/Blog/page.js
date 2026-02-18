@@ -2,6 +2,7 @@ import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import HeroBlogSection from "@/components/HeroBlog";
 import Navbar from "@/components/Navbar";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
 
 const DOMAIN = "https://your-domain.com"; // غيّره
 const BRAND = {
@@ -62,6 +63,7 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
+      <WhatsAppBtn />
       <HeroBlogSection />
       <BlogSection />
       <Footer />

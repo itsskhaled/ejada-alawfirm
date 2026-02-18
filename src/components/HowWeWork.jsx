@@ -133,7 +133,7 @@ export default function HowWeWorkSection() {
                             <div ref={FlashingCircleRef} className="w-2 h-2 bg-[#f9bb00] rounded-full" />
                             <h1 className="font-bold">{t("titleSection")}</h1>
                         </div>
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-6 text-justify">
                             <h1 ref={titleRef} className="text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-bold capitalize">{t("title")}</h1>
                             <p ref={subTitleRef} className="text-2xs md:text-base text-neutral-600 leading-5 capitalize">{t("subTitle")}</p>
                             <p ref={superTitleRef} className="text-2xs md:text-base text-neutral-600 leading-5 capitalize">{t("superTitle")}</p>

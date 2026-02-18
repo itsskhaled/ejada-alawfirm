@@ -3,8 +3,8 @@
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
-import imagePhoto1 from "@/app/Image/Credits/1.webp";
-import imagePhoto2 from "@/app/Image/Credits/2.webp";
+import imagePhoto1 from "@/app/Image/Credits/1.png";
+import imagePhoto2 from "@/app/Image/Credits/2.png";
 import imagePhoto3 from "@/app/Image/Credits/3.png";
 import imagePhoto4 from "@/app/Image/Credits/4.png";
 import imagePhoto5 from "@/app/Image/Credits/5.png";
@@ -102,12 +102,12 @@ export default function CreditsSection() {
                 <p ref={textRef} className="text-xl md:text-2xl text-center">{t("text")}</p>
             </div>
 
-            <div className="w-full flex flex-wrap gap-5 justify-center my-20">
+            <div className="w-full flex flex-wrap gap-1 justify-center my-20">
                 {credits.map((credit, i) => {
                     return (
                         <div
                             key={i}
-                            className="w-120 h-40 md:grayscale transition-all duration-300 hover:grayscale-0"
+                            className="w-120 h-50 md:grayscale transition-all duration-300 hover:grayscale-0"
                         >
                             <Image
                                 src={credit.image}

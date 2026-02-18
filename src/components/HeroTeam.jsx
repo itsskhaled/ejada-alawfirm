@@ -43,7 +43,7 @@ export default function HeroTeamSection() {
     <section
       className="w-full relative py-40 md:py-30"
     >
-      <div className="flex flex-col items-center justify-center w-full px-10 gap-10">
+      <div className="flex flex-col items-center justify-center w-full px-10 gap-10 text-justify">
         <h1 ref={titleRef} className="text-4xl sm:text-4xl md:text-5xl lg:text-9xl md:w-7xl leading-relaxed text-center font-bold capitalize">
           {t("title")}
         </h1>

@@ -92,18 +92,18 @@ export default function CTASection() {
                 </div>
 
                 <div className="absolute flex flex-col gap-5 text-center items-center py-20">
-                    <h1 ref={titleRef} className="text-white text-4xl md:text-5xl pb-10">
+                    <h1 ref={titleRef} className="text-white text-4xl md:text-5xl lg:text-7xl pb-10">
                         {t("title")}
                     </h1>
-                    <h1 ref={textRef} className="text-white text-xl md:text-4xl px-5 md:w-4xl">
+                    <h1 ref={textRef} className="text-white text-xl md:text-4xl lg:text-5xl px-5 md:w-4xl">
                         {t("text")}
                     </h1>
 
-                    <div ref={btnsRef} className="flex flex-col md:flex-row gap-5">
+                    <div ref={btnsRef} className="flex flex-wrap justify-center gap-5 mt-5">
                         <Link
                             href="https://wa.me/966920008433"
                             target="_blank"
-                            className="text-white border px-4 py-2 rounded-xl font-bold cursor-pointer"
+                            className="text-white border px-8 py-4 rounded-xl font-bold cursor-pointer text-base sm:text-base md:text-xl"
                         >
                             {t("btnColl")}
                         </Link>
@@ -111,7 +111,7 @@ export default function CTASection() {
                         <button
                             onClick={handleBook}
                             type="button"
-                            className="bg-[#f9bb00] px-4 py-2 rounded-xl font-bold cursor-pointer text-black"
+                            className="bg-[#f9bb00] px-8 py-4 rounded-xl font-bold cursor-pointer text-black text-base sm:text-base md:text-xl"
                         >
                             {t("btnBook")}
                         </button>

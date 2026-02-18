@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import HeroTeamSection from "@/components/HeroTeam";
 import Navbar from "@/components/Navbar";
 import OurNumberSection from "@/components/OurNumber";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
 
 const DOMAIN = "https://your-domain.com"; // غيّره
 const BRAND = {
@@ -63,6 +64,7 @@ export default function TeamPage() {
   return (
     <>
       <Navbar />
+      <WhatsAppBtn />
       <HeroTeamSection />
       <OurNumberSection />
       <CTASection />

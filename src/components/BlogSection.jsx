@@ -60,7 +60,7 @@ export default function BlogSection() {
   })
 
   return (
-    <section ref={containerRef} className="w-full py-16 md:py-24 relative">
+    <section ref={containerRef} className="w-full py-20 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-20">
           {items.map((item, i) => (

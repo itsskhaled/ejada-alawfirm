@@ -37,7 +37,8 @@ export default function HeroBlogSection() {
             ease: "power3.out"
         })
             .from(textSplit.words, {
-                xPercent: -100,
+                xPercent: 100,
+                y:50,
                 opacity: 0,
                 duration: .8,
                 stagger: 0.05,
@@ -51,9 +52,9 @@ export default function HeroBlogSection() {
     })
     return (
         <section ref={containerRef} className="w-full h-screen relative py-35">
-            <div className="flex flex-wrap w-full justify-center md:justify-between py-10 px-5 md:px-20 items-center gap-5">
+            <div className="flex flex-col w-full text-justify justify-center md:justify-between py-10 px-5 md:px-20 items-center gap-5">
                 <h1 ref={titleRef} className="text-6xl font-bold">{t("title")}</h1>
-                <p ref={textRef} className="md:w-xl text-3xl text-center md:text-start">{t("text")}</p>
+                <p ref={textRef} className="md:w-xl text-3xl text-center">{t("text")}</p>
             </div>
             <div ref={imageRef} className="w-full h-130 bg-black">
                 <Image src={bgBlog} alt="bgBlog" className="w-full h-full object-cover" />

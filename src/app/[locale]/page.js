@@ -11,6 +11,7 @@ import QuestionsSection from "@/components/Questions";
 import ContactSection from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollToStoredTarget from "@/components/ScrollToStoredTarget";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
 
 const DOMAIN = "https://your-domain.com"; // غيره
 const PHONE = "+966920008433";
@@ -128,6 +129,7 @@ export default function Page({ params }) {
       <JsonLd data={structuredData} />
       <ScrollToStoredTarget />
       <Navbar />
+      <WhatsAppBtn />
       <div className="relative w-full overflow-hidden">
         <div className="absolute top-45">
           <AnimationHero />

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import ar from "@/messages/ar.json";
 import en from "@/messages/en.json";
 import Footer from "@/components/Footer";
+import WhatsAppBtn from "@/components/WhatsAppBtn";
 
 const MESSAGES = { ar, en };
 
@@ -160,6 +161,7 @@ export default async function BlogDetails({ params }) {
         />
 
         <Navbar />
+        <WhatsAppBtn />
 
         <h1 className="text-3xl font-bold py-10">{blog.title}</h1>
 
