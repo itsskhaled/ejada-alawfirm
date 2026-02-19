@@ -61,7 +61,6 @@ export default function CreditsSection() {
                 type: "words",
                 mask: "words"
             })
-
             tl
                 .from(titleSectionRef.current, {
                     width: 0,
@@ -80,7 +79,7 @@ export default function CreditsSection() {
                     y: 80,
                     opacity: 0,
                     duration: .5,
-                    stagger: .05,
+                    stagger: { each: .05, from: "center" },
                     ease: "power2.out"
                 }, "<")
         })

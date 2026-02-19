@@ -32,12 +32,6 @@ export default function BlogSection() {
           duration: 0.8,
           stagger: { each: 0.1 },
           ease: "power2.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top center",
-            end: "+=100%",
-            // markers: true
-          }
         })
       } else if (isMobile) {
         postsRef.current.forEach((card) => {
@@ -49,7 +43,7 @@ export default function BlogSection() {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 70%",
+              start: "top 97%",
               end: "+=100%",
               // markers: true
             }
@@ -60,9 +54,9 @@ export default function BlogSection() {
   })
 
   return (
-    <section ref={containerRef} className="w-full py-20 relative">
+    <section ref={containerRef} className="w-full py-5 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-20">
+        <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-10">
           {items.map((item, i) => (
             <article
               key={i}

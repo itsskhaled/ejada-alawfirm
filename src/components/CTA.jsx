@@ -86,27 +86,17 @@ export default function CTASection() {
 
     return (
         <section ref={containerRef} className="w-full relative py-10 px-5 md:px-20">
-            <div className="w-full flex justify-center items-center relative">
-                <div ref={ImageRef} className="w-full h-150">
+            <div className="w-full flex justify-start items-center relative">
+                <div ref={ImageRef} className="w-full h-180">
                     <Image src={imageCTA} alt="imageCTA" className="w-full h-full object-cover rounded-xl" />
                 </div>
 
-                <div className="absolute flex flex-col gap-5 text-center items-center py-20">
-                    <h1 ref={titleRef} className="text-white text-4xl md:text-5xl lg:text-7xl pb-10">
-                        {t("title")}
-                    </h1>
-                    <h1 ref={textRef} className="text-white text-xl md:text-4xl lg:text-5xl px-5 md:w-4xl">
-                        {t("text")}
-                    </h1>
-
-                    <div ref={btnsRef} className="flex flex-wrap justify-center gap-5 mt-5">
-                        <Link
-                            href="https://wa.me/966920008433"
-                            target="_blank"
-                            className="text-white border px-8 py-4 rounded-xl font-bold cursor-pointer text-base sm:text-base md:text-xl"
-                        >
-                            {t("btnColl")}
-                        </Link>
+                <div className="absolute px-5 md:px-20 py-20">
+                    <div className="flex flex-col gap-5 md:gap-10">
+                        <h1 ref={titleRef} className="text-[#f9bb00] font-bold text-3xl sm:text-3xl md:text-5xl lg:text-7xl leading-relaxed">{t("title")}</h1>
+                        <h2 ref={textRef} className="text-white text-md sm:text-md md:text-2xl lg:text-3xl">{t("text")}</h2>
+                    </div>
+                    <div ref={btnsRef} className="flex flex-wrap gap-5 md:gap-10 mt-10">
 
                         <button
                             onClick={handleBook}
@@ -115,6 +105,13 @@ export default function CTASection() {
                         >
                             {t("btnBook")}
                         </button>
+                        <Link
+                            href="https://wa.me/966920008433"
+                            target="_blank"
+                            className="text-white border px-8 py-4 rounded-xl font-bold cursor-pointer text-base sm:text-base md:text-xl"
+                        >
+                            {t("btnColl")}
+                        </Link>
                     </div>
                 </div>
             </div>

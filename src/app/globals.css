@@ -12,81 +12,78 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-fs-albert-arabic), system-ui, sans-serif;
 }
 
+::selection {
+  color: #000;
+  background: #f9bb00;
+}
+
 /* Swiper Navigation Buttons */
 .swiper-button-prev,
 .swiper-button-next {
-    width: 44px;
-    height: 44px;
-    background: linear-gradient(135deg, #f9bb00, #e0a800);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(249, 187, 0, 0.35);
-    transition: all 0.3s ease;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #f9bb00, #e0a800);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(249, 187, 0, 0.35);
+  transition: all 0.3s ease;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    font-size: 16px;
-    font-weight: bold;
-    color: #111;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    transform: scale(1.08);
-    box-shadow: 0 12px 28px rgba(249, 187, 0, 0.5);
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(249, 187, 0, 0.5);
 }
 
 /* Position refinement */
 .swiper-button-prev {
-    left: -10px;
+  left: -10px;
 }
 
 .swiper-button-next {
-    right: -10px;
+  right: -10px;
 }
 
 /* Mobile */
 @media (max-width: 640px) {
-    .swiper-button-prev,
-    .swiper-button-next {
-        width: 38px;
-        height: 38px;
-    }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 .nav-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: #f9bb00;
-    color: #000;
-    font-size: 22px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.25s ease;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f9bb00;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
 }
 
 .nav-btn:hover {
-    background: #ffbf00;
-    transform: translateY(-2px);
+  background: #ffbf00;
+  transform: translateY(-2px);
 }
 
 .nav-btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
-

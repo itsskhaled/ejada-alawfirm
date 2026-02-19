@@ -189,7 +189,7 @@ export default function AboutSection() {
 
                 <div
                     ref={textRef}
-                    className="text-white text-justify text-2xl px-4 md:text-3xl md:w-2xl lg:w-6xl leading-relaxed capitalize"
+                    className="text-white text-justify text-xl px-4 md:text-3xl md:w-2xl lg:w-6xl leading-relaxed capitalize"
                 >
                     <p>{t("text")}</p>
                 </div>

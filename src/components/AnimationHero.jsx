@@ -23,15 +23,11 @@ export default function AnimationHero() {
 
       if (!base || !glow1 || !glow2 || !grad1 || !grad2) return;
 
-      // احترام تقليل الحركة
       const reduceMotion =
         typeof window !== "undefined" &&
         window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       if (reduceMotion) return;
-
-      // (اختياري) خفف ضغط الأنيميشن
-      // gsap.ticker.fps(30);
 
       const L = base.getTotalLength();
 
@@ -78,7 +74,6 @@ export default function AnimationHero() {
       const tl1 = makeRunner(glow1, grad1, 0);
       const tl2 = makeRunner(glow2, grad2, duration * (1 - overlap));
 
-      // === شغّل/وقف الأنيميشن حسب ظهور الهيرو ===
       const el = containerRef.current;
       if (!el) return;
 
@@ -98,7 +93,6 @@ export default function AnimationHero() {
 
       io.observe(el);
 
-      // Cleanup
       return () => {
         io.disconnect();
         tl1.kill();
@@ -118,7 +112,7 @@ export default function AnimationHero() {
       width="2038.994"
       height="274.871"
       viewBox="0 0 2038.994 274.871"
-      style={{ contain: "paint" }} // يساعد شوي بالرسم
+      style={{ contain: "paint" }}
     >
       <defs>
         <linearGradient
@@ -168,7 +162,6 @@ export default function AnimationHero() {
         stroke="url(#glow1)"
         strokeWidth="5"
         strokeLinecap="round"
-        // خفف الـ shadow (أو شيله بالكامل إذا بدك فرق كبير)
         style={{ filter: "drop-shadow(0 0 6px rgba(255,200,0,0.6))" }}
       />
 

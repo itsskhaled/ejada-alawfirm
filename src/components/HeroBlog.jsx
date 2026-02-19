@@ -15,7 +15,6 @@ export default function HeroBlogSection() {
     const containerRef = useRef(null);
     const titleRef = useRef(null);
     const textRef = useRef(null);
-    const imageRef = useRef(null);
 
     useGSAP(() => {
         const tl = gsap.timeline();
@@ -44,20 +43,12 @@ export default function HeroBlogSection() {
                 stagger: 0.05,
                 ease: "power3.out"
             }, "<")
-            .from(imageRef.current, {
-                opacity: 0,
-                duration: 0.5,
-                ease: "power1.out"
-            },"<20%")
     })
     return (
-        <section ref={containerRef} className="w-full h-screen relative py-35">
+        <section ref={containerRef} className="w-full relative pt-35">
             <div className="flex flex-col w-full text-justify justify-center md:justify-between py-10 px-5 md:px-20 items-center gap-5">
                 <h1 ref={titleRef} className="text-6xl font-bold">{t("title")}</h1>
-                <p ref={textRef} className="md:w-xl text-3xl text-center">{t("text")}</p>
-            </div>
-            <div ref={imageRef} className="w-full h-130 bg-black">
-                <Image src={bgBlog} alt="bgBlog" className="w-full h-full object-cover" />
+                <p ref={textRef} className="md:w-3xl text-3xl text-center">{t("text")}</p>
             </div>
         </section>
     );
