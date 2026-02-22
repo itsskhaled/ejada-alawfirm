@@ -87,3 +87,20 @@ body {
 .nav-btn:active {
   transform: scale(0.95);
 }
+
+
+/* عرض السكروول */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* الخلفية */
+::-webkit-scrollbar-track {
+  background: #404250; /* slate-800 */
+}
+
+/* الجزء المتحرك */
+::-webkit-scrollbar-thumb {
+  background: #f9bb00; /* blue-500 */
+  border-radius: 3px;
+}
